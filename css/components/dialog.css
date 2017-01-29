@@ -1,0 +1,28 @@
+/**
+ * Presentational styles for Drupal dialogs.
+ */
+
+.ui-dialog {
+  background: transparent;
+}
+.ui-dialog .ui-dialog-titlebar,
+.ui-dialog .ui-widget-content.ui-dialog-buttonpane {
+  background: #222;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.ui-dialog .ui-dialog-title {
+  color: #ffffff;
+}
+.ui-dialog .ui-icon.ui-icon-closethick {
+  visibility: hidden;
+}
+.ui-dialog .ui-widget-content.ui-dialog-content {
+  background: #444;
+}
+.ui-dialog .ajax-progress-throbber {
+  background-color: #222;
+}
+

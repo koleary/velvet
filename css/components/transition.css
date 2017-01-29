@@ -1,0 +1,14 @@
+/* Background transitions. */
+.button,
+input.button--primary,
+.tab {
+  transition: background .5s ease;
+}
+
+/* Color transitions */
+.link,
+.description,
+.details-description,
+.details-wrapper .description {
+  transition: color .5s ease;
+}

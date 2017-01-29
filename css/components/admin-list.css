@@ -1,0 +1,6 @@
+/**
+ * Admin lists.
+ */
+.admin-list li {
+  border-top: 1px solid #777;
+}

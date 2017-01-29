@@ -1,0 +1,114 @@
+
+/*
+ * @file
+ * Override vertical tabs for settings tray.
+ */
+
+.form-type-vertical-tabs label {
+  margin-bottom: 10px;
+}
+.vertical-tabs {
+  margin: 0 -20px;
+  border: 0;
+  background: #333;
+}
+.vertical-tabs__menu {
+  float: left; /* LTR */
+  width: 140px; /* fixed width so tabs dont 'bounce' if scroll is triggered */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+}
+[dir="rtl"] .vertical-tabs__menu {
+  float: right;
+  margin: 0;
+}
+.vertical-tabs__pane {
+  float: right; /* LTR */
+  width: calc(100% - 140px); /* 140 is the width of tabs menu */
+  margin: 0;
+  border: 0;
+}
+[dir="rtl"] .vertical-tabs__pane {
+  float: left;
+  margin: 0;
+  padding: 20px;
+}
+.vertical-tabs .details-wrapper {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.vertical-tabs details {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+}
+.vertical-tabs fieldset.fieldgroup {
+  margin: 0;
+  padding: 0;
+}
+.vertical-tabs__pane > summary {
+  display: none;
+}
+details[open].vertical-tabs__pane {
+  background: transparent;
+}
+.vertical-tabs_pane fieldset {
+  padding-top: 0;
+}
+
+/* Layout of each tab. */
+.vertical-tabs__menu-item {
+  border: 0;
+  border-top: 0;
+  padding: 10px 5px 10px 20px; /* LTR */
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  transition: background 0.5s;
+}
+.vertical-tabs__menu-item:hover {
+  background: #222;
+}
+[dir="rtl"] .vertical-tabs__menu-item {
+  padding: 10px 20px 10px 5px; /* LTR */
+}
+.vertical-tabs__menu-item a {
+  display: block;
+  padding: 0;
+  text-decoration: none;
+  color: #ddd;
+}
+strong.vertical-tabs__menu-item-title {
+  font-weight: normal;
+}
+.vertical-tabs__menu-item a:focus .vertical-tabs__menu-item-title,
+.vertical-tabs__menu-item a:active .vertical-tabs__menu-item-title,
+.vertical-tabs__menu-item a:hover .vertical-tabs__menu-item-title {
+  text-decoration: none;
+}
+.vertical-tabs__menu-item a:hover,
+.vertical-tabs__menu-item a:focus,
+.vertical-tabs__menu-item a:active {
+  color: #fff;
+  outline: none;
+}
+.vertical-tabs__menu-item.is-selected {
+  border: 0;
+  background-color: #111;
+}
+[dir="rtl"] .vertical-tabs__menu-item.is-selected {
+  border: 0;
+}
+.vertical-tabs__menu-item.is-selected .vertical-tabs__menu-item-title {
+  color: inherit;
+}
+.vertical-tabs__menu-item-summary {
+  display: block;
+  margin-bottom: 0;
+  font-size: 0.85em;
+  color: #bbb;
+  line-height: inherit;
+}

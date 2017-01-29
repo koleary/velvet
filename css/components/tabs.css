@@ -1,0 +1,169 @@
+/**
+ * Tabs.
+ */
+
+.is-collapse-enabled .tabs:before,
+.is-horizontal .tabs:before {
+  background-color: #444;
+}
+.content-header .is-horizontal .tabs:before,
+.content-header .is-collapse-enabled .tabs:before {
+  left: 0;
+  right: 0;
+}
+.tabs__tab {
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: #ccc;
+}
+.tabs__tab:hover,
+.tabs__tab:focus {
+  color: #eee;
+  background-color: #111;
+}
+li.tabs__tab a {
+  color: #ccc;
+}
+.tabs a:hover,
+.tabs a:focus {
+  text-decoration: none;
+}
+
+/* Primary tabs */
+.tabs.primary .tabs__tab.is-active {
+  border-color: transparent;
+  border-radius: 0;
+  background-color: #444;
+}
+.tabs__tab.is-active a {
+  color: #fff;
+}
+[dir="rtl"] .tabs.primary .tabs__tab.is-active {
+  border-radius: 0;
+}
+.tabs.primary a:focus {
+  color: #fff;
+  background-color: #333;
+  text-decoration: none;
+}
+.tabs.primary .is-active a:focus {
+  background: none;
+  text-decoration: none;
+}
+
+/* JS dependent styling */
+ .is-collapse-enabled .tabs__trigger {
+  border-radius: 0;
+}
+[dir="rtl"] .is-collapse-enabled .tabs__trigger {
+  border-left: 1px solid #777;
+  border-radius: 0;
+}
+.is-collapse-enabled .tabs.primary a.is-active:before {
+  content: none;
+}
+.is-open .tabs__tab.is-active {
+  border-color: transparent;
+  background-color: #444;
+  color: #fff;
+  border-bottom: 1px solid transparent;
+}
+
+/* Styles for the horizontal state. */
+.is-horizontal .tabs__tab {
+  text-align: center;
+  border-bottom-color: transparent;
+}
+.is-horizontal .tabs.primary .tabs__tab:first-child {
+  border-radius: 0;
+}
+[dir="rtl"] .is-horizontal .tabs.primary .tabs__tab:first-child {
+  border-radius: 0;
+}
+.is-horizontal .tabs.primary .tabs__tab:last-child {
+  border-radius: 0;
+}
+[dir="rtl"] .is-horizontal .tabs.primary .tabs__tab:last-child {
+  border-radius: 0;
+}
+
+.is-horizontal .tabs__tab.is-active,
+.is-horizontal .tabs.primary .tabs__tab.is-active,
+[dir="rtl"] .is-horizontal .tabs.primary .tabs__tab.is-active {
+  border-radius: 0;
+  top: 0;
+  border-bottom: 0;
+  margin: 0 -4px;
+}
+
+/* Secondary tabs */
+.tabs.secondary .tabs__tab {
+  color: #eee;
+}
+.tabs.secondary .tabs__tab + .tabs__tab {
+  border-top: 1px solid #777;
+}
+.tabs.secondary .tabs__tab.is-active {
+  color: #fff;
+  border-left: 2px solid #777; /* LTR */
+  padding-left: 15px; /* LTR */
+}
+[dir="rtl"] .tabs.secondary .tabs__tab.is-active {
+  border-left: 1px solid #777;
+  border-right: 2px solid #777;
+  padding-right: 15px;
+}
+[dir="rtl"] .views-displays .tabs.secondary li.is-active {
+  border: 0 none;
+  padding-right: 0;
+}
+.tabs.secondary .tabs__tab:hover,
+.tabs.secondary .tabs__tab:focus {
+  color: #fff;
+  border-left: 2px solid #777; /* LTR */
+  padding-left: 15px; /* LTR */
+}
+[dir="rtl"] .tabs.secondary .tabs__tab:hover,
+[dir="rtl"] .tabs.secondary .tabs__tab:focus {
+  border-left: 1px solid #777;
+  border-right: 2px solid #777;
+  padding-right: 15px;
+}
+[dir="rtl"] .views-displays .tabs li.tabs__tab:hover {
+  border: 0 none;
+  padding-right: 0;
+}
+.tabs.secondary a {
+  background-color: transparent;
+  text-decoration: none;
+}
+.tabs.secondary .is-active a {
+  color: #fff;
+}
+.tabs.secondary a:focus {
+  text-decoration: underline;
+}
+
+/* Styles for the horizontal state */
+.is-horizontal .tabs.secondary .tabs__tab {
+  margin-left: 1em;
+  margin-right: 1em;
+  border-bottom: 2px solid transparent;
+  border-left: 1px solid transparent; /* LTR */
+  border-right-color: transparent; /* LTR */
+  border-top: 0;
+  padding: 0;
+}
+[dir="rtl"] .is-horizontal .tabs.secondary .tabs__tab {
+  float: right;
+  border-right: 1px solid transparent;
+  border-left-color: transparent;
+  padding-right: 0;
+}
+.is-horizontal .tabs.secondary .tabs__tab.is-active {
+  border-bottom-color: #777;
+}
+.is-horizontal .tabs.secondary .tabs__tab:hover,
+.is-horizontal .tabs.secondary .tabs__tab:focus {
+  border-bottom-color: #777;
+}

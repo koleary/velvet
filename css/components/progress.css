@@ -1,0 +1,29 @@
+/* Progress bar */
+
+.progress__bar {
+  background-color: #3ca8ff;
+  height: 16px;
+  width: 3%;
+  min-width: 3%;
+  max-width: 100%;
+}
+.progress__track {
+  background-color: #777;
+  border: 1px solid;
+  margin-top: 5px;
+  max-width: 100%;
+  min-width: 100px;
+  height: 16px;
+}
+.progress__percentage {
+  float: right;
+  color: #ddd;
+  font-size: 12px;
+  font-weight: bold;
+}
+.progress__description, .progress__percentage {
+  color: #ddd;
+  overflow: hidden;
+  font-size: 12px;
+  margin-top: 10px;
+}

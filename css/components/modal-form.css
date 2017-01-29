@@ -1,0 +1,44 @@
+/* Modal table cell form. */
+
+tr.field-plugin-settings-editing {
+  box-sizing: border-box;
+  background: #333;
+  display: block;
+  float: left;
+  position: static;
+  padding: 0;
+  width: 200%;
+  max-width: 400px;
+}
+.field-ui-overview .field-plugin-settings-editing td {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  background: #333;
+  border-bottom: 0;
+  vertical-align: top;
+}
+div.ajax-new-content {
+  box-sizing: border-box;
+  width: calc(100% - 40px);
+  padding-left: 20px;
+}
+.ajax-new-content div.description.description {
+  white-space: normal;
+}
+div.ajax-new-content > div {
+  box-sizing: border-box;
+  width: calc(100% - 40px);
+  padding-bottom: 0;
+  margin: 0;
+}
+div.ajax-new-content div.form-actions {
+  padding: 0;
+  margin: 0;
+}
+div.field-plugin-settings-edit-form .form-submit {
+  margin-bottom: 10px;
+  display: inline-block;
+  float: left;
+  width: auto;
+}

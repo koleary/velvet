@@ -1,0 +1,88 @@
+/**
+ * Generic elements.
+ */
+body {
+  background: #444;
+  font: normal 81.3%/1.538em "Lucida Grande", 'Lucida Sans Unicode','liberation sans', sans-serif;
+  color: #e5e5e5;
+}
+a,
+.link {
+  color: #85bef4;
+  text-decoration: none;
+}
+a:hover,
+.link:hover,
+a:focus,
+.link:focus {
+  text-decoration: none;
+  outline: 0;
+}
+hr {
+  background: #fff;
+}
+summary,
+.fieldgroup:not(.form-composite) > legend {
+  text-transform: none;
+}
+h1,
+h2,
+h3 {
+  font-weight: 100;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-a,
+.heading-b,
+.heading-c,
+.heading-d,
+.heading-e,
+.heading-f {
+  color: #fff,
+}
+p,
+dl,
+dd,
+dl dl,
+blockquote,
+address,
+u,
+ins,
+s,
+strike,
+del,
+big,
+small,
+sub,
+sup,
+nobr,
+abbr,
+acronym,
+ul,
+ol,
+li {
+  color: #e5e5e5;
+}
+code,
+pre {
+  color: #88cc00;
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console","Liberation Mono", monospace;
+}
+details {
+  line-height: normal;
+}
+details summary {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+details summary:focus {
+  outline: none;
+}
+details summary:focus,
+details summary:hover {
+  text-decoration: none;
+}

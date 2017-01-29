@@ -1,0 +1,44 @@
+/**
+ * @file
+ * Entity meta settings.
+ */
+
+.entity-meta {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.entity-meta,
+.entity-meta__header,
+.entity-meta details {
+  background-color: #444;
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  box-shadow: none;
+  color: #ddd;
+}
+.entity-meta__title {
+  text-shadow: none;
+}
+.entity-meta details {
+  margin-bottom: 2px;
+}
+.entity-meta details:first-child {
+  border-top-color: transparent;
+}
+.entity-meta details[open],
+.entity-meta details[open] + details[open] {
+  background-color: #333;
+  background-image: none;
+  border-top-width: 0;
+  padding-top: 0;
+}
+.entity-meta details > summary {
+  text-shadow: none;
+  margin: 0;
+  padding: 0 20px;
+}
+.entity-meta details .summary {
+ display: none; /* Hide JS summaries. @todo Rethink summaries. */
+}

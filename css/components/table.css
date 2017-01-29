@@ -1,0 +1,114 @@
+/**
+ * @file
+ * Visual styling for tables in the Offcanvas tray.
+ */
+
+table {
+  border: 0;
+  border-collapse: collapse;
+  min-width: 300px;
+  margin-top: 0;
+}
+tr,
+thead {
+  padding: 0 20px;
+}
+tr > th,
+tr > td {
+  width: auto;
+  padding: 8px 4px;
+  background: none;
+  background-color: transparent;
+  vertical-align: middle;
+  border: 0;
+  border-bottom: 1px solid #777;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: left; /* LTR */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #bbb;
+}
+[dir="rtl"] tr > th,
+[dir="rtl"] tr > td {
+  text-align: right;
+}
+tr:hover > th {
+  background: none;
+}
+td > div,
+td > .form-item,
+td > .dropbutton-wrapper,
+td .form-type-select > .form-select {
+  margin: 0;
+  vertical-align: middle;
+}
+td > .form-wrapper > .button {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/* Match the line height of the td so dropbutton aligns to select. */
+.js td .dropbutton-wrapper {
+  min-height: 20px;
+}
+td:first-child,
+th:first-child {
+  padding-left: 20px; /* LTR */
+}
+
+/* Remove hover with no data. */
+tbody tr:hover .region-empty {
+  background-color: transparent;
+}
+
+/* Override semantic background hover color. */
+tbody tr.color-warning:hover,
+tbody tr.color-warning:focus,
+tbody tr.color-error:hover,
+tbody tr.color-error:focus {
+  background: #333;
+}
+tr:hover,
+tr:hover td {
+  background-color: #333;
+}
+
+tr.odd,
+tr.even {
+  background-image: none;
+  background-color: transparent;
+}
+td.checkbox,
+th.checkbox {
+  text-align: center;
+  width: 20px;
+}
+thead th {
+  text-transform: none;
+}
+th > a {
+  color: #ddd;
+}
+th > a:after {
+  bottom: -8px;
+}
+th.is-active > a {
+  color: #fff;
+}
+th.is-active > a:after {
+  border-bottom-color: #fff;
+}
+th > a:hover,
+th > a:focus,
+th.is-active > a:hover,
+th.is-active > a:focus {
+  color: #fff;
+}
+th > a:hover:after,
+th > a:focus:after,
+th.is-active > a:hover:after,
+th.is-active > a:focus:after {
+  border-bottom-color: #eee;
+}

@@ -1,0 +1,38 @@
+name: Velvet
+type: theme
+base theme: seven
+description: 'Velvet theme is a sub-theme of the Seven admin theme designed specifically for admin tools on the site front-end.'
+alt text: 'Dark toned theme for admin tools on the site front-end.'
+package: Core
+version: VERSION
+core: 8.x
+libraries:
+ - velvet/global-styling
+libraries-override:
+  core/drupal.vertical-tabs:
+    css:
+      component:
+        misc/vertical-tabs.css: false
+  seven/global-styling:
+    css:
+      component:
+        css/components/dropbutton.component.css: false
+libraries-extend:
+  core/ckeditor:
+    - velvet/ckeditor-dialog
+  tour/tour-styling:
+    - velvet/tour-styling
+quickedit_stylesheets:
+  - css/components/quickedit.css
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+regions_hidden:
+  - sidebar_first
