@@ -38,18 +38,18 @@ div.description:hover,
  * Font size, margin padding and line height of inputs 
  * MUST match buttons for inline alignment. 
  */
-.form-select,
-.form-text,
-.form-tel,
-.form-email,
-.form-url,
-.form-search,
-.form-number,
-.form-color,
-.form-file,
-.form-textarea,
-.form-date,
-.form-time {
+input.form-select,
+input.form-text,
+input.form-tel,
+input.form-email,
+input.form-url,
+input.form-search,
+input.form-number,
+input.form-color,
+input.form-file,
+input.form-textarea,
+input.form-date,
+input.form-time {
   display: block;
   box-sizing: border-box;
   max-width: 100%;
@@ -67,17 +67,17 @@ div.description:hover,
   cursor: pointer;
 }
 /* Reduce contrast for fields against dark backround. */
-.form-text,
-.form-tel,
-.form-email,
-.form-url,
-.form-search,
-.form-number,
-.form-color,
-.form-file,
-.form-textarea,
-.form-date,
-.form-time {
+input.form-text,
+input.form-tel,
+input.form-email,
+input.form-url,
+input.form-search,
+input.form-number,
+input.form-color,
+input.form-file,
+input.form-textarea,
+input.form-date,
+input.form-time {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .2);
   background-color: #eee;
   border-color: #333;
@@ -85,25 +85,25 @@ div.description:hover,
   color: #595959;
   transition: all .5s ease;
 }
-.form-text:focus,
-.form-tel:focus,
-.form-email:focus,
-.form-url:focus,
-.form-search:focus,
-.form-number:focus,
-.form-color:focus,
-.form-file:focus,
-.form-textarea:focus,
-.form-date:focus,
-.form-time:focus {
+input.form-text:focus,
+input.form-tel:focus,
+input.form-email:focus,
+input.form-url:focus,
+input.form-search:focus,
+input.form-number:focus,
+input.form-color:focus,
+input.form-file:focus,
+input.form-textarea:focus,
+input.form-date:focus,
+input.form-time:focus {
   border-color: #40b6ff;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, .125), 0 0 8px #40b6ff;
   background-color: #fff;
 }
-.radio,
-.checkbox,
-[type="radio"],
-[type="checkbox"] {
+input.radio,
+input.checkbox,
+input[type="radio"],
+input[type="checkbox"] {
   position: static;
   margin: 0;
 }
@@ -112,8 +112,8 @@ td .checkbox {
   line-height: normal;
   vertical-align: middle;
 }
-.form-checkbox,
-.form-radio {
+input.form-checkbox,
+input.form-radio {
   /* Add contrast for dark background. */
   box-shadow: 0 0 1px 1px #000;
 }
@@ -151,7 +151,7 @@ select:active {
 }
 
 /* Smaller select for tables. */
-td select.form-select {
+td selectinput.form-select {
   max-width: 100px;
   min-width: 60px;
   text-overflow: ellipsis;
@@ -176,7 +176,7 @@ td select.form-select {
     width: 100%;
     margin-right: 0;
   }
-  td select.form-select {
+  td selectinput.form-select {
     max-width: 100px;
   }
   .details-wrapper > .form-item select {
@@ -184,7 +184,7 @@ td select.form-select {
   }
 }
 @media all and (min-width: 40em) {
-  td select.form-select {
+  td selectinput.form-select {
     max-width: 200px;
   }
   .form--inline > .form-item {
