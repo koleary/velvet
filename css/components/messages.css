@@ -11,10 +11,7 @@
   background-position: 10px 18px; /* LTR */
   /* Provide space for icon and asterisk. */
   padding: 15px 10px 15px 35px; /* LTR */
-  margin-top: 5px;
-  margin-right: 0;
-  margin-bottom: 5px;
-  margin-left: 0;
+  margin: 0 -20px 1px; /* Push to viewport edge. */
   /* Specificity needed to reset border style from classy. */
   border-top-width: 0;
   border-right-width: 0;
@@ -29,7 +26,6 @@
   padding-left: 10px;
   padding-right: 35px;
   /* Classy sets a specific value here that must be overridden. */
-  margin-left: -20px;
   border-left-width: 0;
   border-right-width: 5px; /* 2. Sets RTL border for all messages. */
   text-align: right;

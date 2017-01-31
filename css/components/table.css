@@ -7,11 +7,18 @@ table {
   border: 0;
   border-collapse: collapse;
   min-width: 300px;
-  margin-top: 0;
+  width: calc(100% + 40px);
+  margin: 0 -20px; /* Push to viewport edge. */
 }
 tr,
 thead {
   padding: 0 20px;
+}
+tr > th {
+  color: #ccc;
+}
+tr > td {
+  color: #ddd;
 }
 tr > th,
 tr > td {
@@ -26,9 +33,7 @@ tr > td {
   line-height: 20px;
   text-align: left; /* LTR */
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
-  color: #bbb;
 }
 [dir="rtl"] tr > th,
 [dir="rtl"] tr > td {
@@ -53,6 +58,9 @@ td > .form-wrapper > .button {
 .js td .dropbutton-wrapper {
   min-height: 20px;
 }
+.js td .dropbutton-multiple {
+  padding-right: 2em;
+}
 td:first-child,
 th:first-child {
   padding-left: 20px; /* LTR */
@@ -74,7 +82,6 @@ tr:hover,
 tr:hover td {
   background-color: #333;
 }
-
 tr.odd,
 tr.even {
   background-image: none;
@@ -112,3 +119,28 @@ th.is-active > a:hover:after,
 th.is-active > a:focus:after {
   border-bottom-color: #eee;
 }
+
+/* Squeeze as much into the narrow space as possible. */
+@media all and (min-width: 0em) {
+  td,
+  td.block,
+  td select.form-select {
+    max-width: 80px;
+    font-size: 95%;
+    letter-spacing: -0.2px;
+    overflow: hidden;
+  }
+  /* This prevents the dropbutton from being hidden. 
+  /* @todo Figure out a way that doesn't assume actions are always the last cell. */
+  td:last-child,
+  td.block:last-child {
+    overflow: visible;
+  }
+}
+@media all and (min-width: 40em) {
+  td.block {
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
+

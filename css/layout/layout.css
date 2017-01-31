@@ -3,10 +3,9 @@
  * Layout rules.
  */
 
-.page-content {
-  margin-bottom: 80px;
+.layout-container {
+  margin: 0 20px;
 }
-.layout-container,
 .region.region-header,
 .region.region-breadcrumb,
 .region.region-help,
@@ -15,37 +14,3 @@
   margin-left: 0;
   margin-right: 0;
 }
-/* Make a class in twig to encompass these. */
-.block > ul,
-.block > ol,
-.block > h1,
-.block > h2,
-.block > h3,
-.block > h4,
-.block > h5,
-.block > h6,
-.block > p {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-div.block.block-local-tasks-block {
-  margin-left: 0;
-  margin-right: 0;
-}
-nav.breadcrumb,
-div.form-actions,
-div.tableresponsive-toggle-columns,
-div.tabledrag-toggle-weight-wrapper,
-div.compact-link,
-div.system-themes-list,
-.node-form {
-  margin: 10px 20px;
-}
-
-@media all and (min-width: 40em) {
-  form > div {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
-

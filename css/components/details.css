@@ -3,34 +3,11 @@
  * Visual styling for the details/summary element.
  */
 
-details,
-summary,
-.filter-wrapper,
-.details-wrapper {
-  background: #222;
-  border: 0px solid transparent;
-  color: #ddd;
-}
-summary a {
-  color: #ddd;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-summary a:hover,
-summary a:focus {
-  color: #fff;
-}
-summary {
-  text-shadow: none;
-  outline: none;
-  padding: 10px 20px;
-  font-size: 1em;
-  line-height: 3em;
-  transition: all .5s ease;
-}
-summary:hover {
-  background-color: #222;
-  outline: none;
+details {
+  width: calc(100% + 40px);
+  margin: 0 -20px 2px; /* Push to viewport edge. */
+  border: 0;
+  line-height: normal;
 }
 details[open] {
   background-color: #222;
@@ -44,11 +21,39 @@ details[open] > summary:hover {
   background-color: #111;
   color: #fff;
 }
-
-/* Remove margins for smaller screens. */
-@media screen and (min-width: 0em) {
-  details {
-    margin-top: 0;
-    margin-bottom: 2px;
-  }
+summary {
+  text-shadow: none;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  line-height: 3em;
+  transition: background .5s ease;
 }
+summary a {
+  color: #ddd;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+summary a:hover,
+summary a:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+}
+summary:hover {
+  background-color: #222;
+  outline: none;
+  text-decoration: none;
+}
+details summary {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+details,
+summary,
+.filter-wrapper,
+.details-wrapper {
+  background: #222;
+  border: 0;
+}
+

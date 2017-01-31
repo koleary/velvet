@@ -76,8 +76,8 @@
   color: #333;
   text-decoration: none;
   text-shadow: none;
-  -webkit-transition: all 0.1s;
-  transition: all 0.1s;
+  /*-webkit-transition: all 0.1s;
+  transition: all 0.1s;*/
   -webkit-font-smoothing: antialiased;
 }
 .views-displays .tabs.secondary li.is-active a {
@@ -109,7 +109,7 @@
 }
 
 /*
- * Remove the ham-handed span implementation of icon.
+ * Remove the span implementation of icon.
  * @todo create an issue to move this fix to upstream to Seven.
  */
 span.icon.add {

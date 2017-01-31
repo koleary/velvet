@@ -1,27 +1,40 @@
-/* Extend page */
+/*
+ * @file
+ * Visual styling overrides for the modules page.
+ */
 
-/* The importants are needed to override Seven. */
+.system-modules table {
+  margin-bottom: 0;
+}
 .system-modules tr.even,
 .system-modules tr.odd,
 .locale-translation-status-form tr.even,
 .locale-translation-status-form tr.odd {
-  background-color: transparent;
-  border-bottom: inherit;
+  background-color: #444;
+  border-bottom: 1px solid #777;
   color: #eee;
 }
 .system-modules tr.even:hover,
 .system-modules tr.odd:hover,
 .locale-translation-status-form tr.even:hover,
 .locale-translation-status-form tr.odd:hover {
+  /* Needed to override Seven. */
   background: transparent; !important;
 }
 .system-modules label:hover,
-.system-modules-uninstall label:hover {
+.system-modules-uninstall label:hover,
+.system-modules td details summary span:hover {
   color: #fff;
 }
 .system-modules label,
-.system-modules-uninstall label {
+.system-modules-uninstall label,
+.system-modules td details a,
+.system-modules td details summary,
+.system-modules td details summary span {
   color: #eee;
+}
+.system-modules > details {
+  margin: 0 -20px; /* Push to viewport edge. */
 }
 .system-modules td details {
   height: auto;
@@ -29,22 +42,31 @@
 .system-modules details[open] {
   background: #333;
   background-color: #333;
+  padding-bottom: 0;
 }
-.system-modules td details a,
-.system-modules td details summary {
-  color: #eee;
+.system-modules .details-wrapper {
+  padding: 0;
+}
+.system-modules td.module {
+  width: auto;
 }
 .system-modules summary {
-  border-bottom: 1px solid #444;
+  border-bottom-color: #444;
 }
-.system-modules td details summary span {
-  color: #eee;
+.system-modules .package-listing {
+  margin-bottom: 0;
 }
-.system-modules td details summary span:hover {
-  color: #fff;
+.system-modules-uninstall td:first-child {
+  width: 30%;
 }
-.system-modules td {
-  vertical-align: middle;
-  padding-left: 1em;
-  padding-right: 1em;
+.system-modules-uninstall td:nth-child(2) {
+  width: 30%;
+}
+.system-modules-uninstall td:nth-child(3) {
+  width: 40%;
+}
+.admin-requirements, 
+.admin-required {
+  font-size: normal;
+  color: #ddd;
 }
