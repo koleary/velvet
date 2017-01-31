@@ -5,6 +5,24 @@
 .views-displays,
 .views-preview-wrapper {
   border: 0;
+  padding-bottom: 10px;
+}
+.views-admin .unit-title {
+  margin-bottom: 10px
+}
+.views-display-top {
+  padding: 0;
+  background-color: #333;
+}
+.edit-display-settings {
+  margin: 0 -20px;
+}
+.views-display-columns > * {
+  margin-bottom: 10px;
+}
+.views-display-column + .views-display-column {
+  margin: 0;
+  width: 100%;
 }
 .views-display-top,
 .view-preview-form__title,
@@ -12,12 +30,13 @@
   background-color: transparent;
   border: 0;
 }
+.views-display-top .dropbutton-wrapper {
+  position: absolute;
+  right: 0; /* LTR */
+  top: -30px;
+}
 .views-displays ul.secondary li a {
   color: #0074bd;
-}
-.views-displays ul.secondary li.is-active a,
-.views-displays ul.secondary li.is-active a.is-active {
-  border: 1px solid transparent;
 }
 #edit-display-settings-title {
   color: #2196f3;
@@ -33,13 +52,24 @@
 .views-displays .secondary .action-list input.form-submit {
   color: #2196f3;
 }
+
+/* Tab buckets. */
+.views-ui-display-tab-bucket {
+  padding: 5px 20px;
+  border: 0;
+  border-bottom: 1px solid #777;
+}
 .views-ui-display-tab-bucket h3 {
   text-transform: uppercase;
 }
+/* Needed to override Stable. */
 .edit-display-settings-top.views-ui-display-tab-bucket {
-  border: 0;
   padding-top: 0;
+  border: 0;
   line-height: 28px;
+}
+.edit-display-settings-top > .views-display-setting {
+  padding: 0;
 }
 .views-ui-display-tab-bucket .views-display-setting {
   color: #ddd;
@@ -47,6 +77,14 @@
 .views-ui-display-tab-bucket .views-display-setting:nth-of-type(even) {
   background-color: transparent;
 }
+.views-ui-display-tab-bucket__title {
+    padding: 5px 0;
+}
+.views-ui-display-tab-bucket .dropbutton-wrapper.dropbutton-multiple {
+  margin: 4px 20px;
+}
+
+/* Controlls. */
 .views-ui-rearrange-filter-form table {
   border: medium none;
 }
@@ -64,48 +102,34 @@
   background-color: #444 !important;
 }
 
+/* Secondary tabs. */
+.views-displays .tabs.secondary {
+  margin-right: 0; 
+}
+.views-displays .tabs.secondary li {
+  margin: 0 5px 5px 0; /* LTR */
+}
 /* Style displays tabs like buttons. */
-.views-displays .tabs.secondary li a {
-  border: 1px solid #aaa;
+.views-displays .tabs.secondary li a,
+.views-displays ul.secondary li a, 
+.views-displays ul.secondary li.is-active a, 
+.views-displays ul.secondary li.is-active a.is-active {
+  box-sizing: border-box;
+  padding: 6px 14px;
+  border: 0;
   border-radius: 20em;
-  padding: 0.2em 1.2em;
-  background-color: #000;
+  background-color: #111;
   background-image: none;
-  font-size: 1em;
-  font-weight: 600;
-  color: #333;
+  font-size: 12px;
+  line-height: 14px;
+  color: #fff;
   text-decoration: none;
   text-shadow: none;
-  /*-webkit-transition: all 0.1s;
-  transition: all 0.1s;*/
   -webkit-font-smoothing: antialiased;
 }
-.views-displays .tabs.secondary li.is-active a {
-  background: #2196f3;
-  border: 1px solid #ddd;
-  padding: 0.2em 1.2em;
-  font-size: 1em;
-  color: #fff;
-}
-.views-displays .tabs.secondary li.add a {
-  padding: 0.2em 1em 0.2em 1.7em;
-}
-.views-displays .tabs .action-list li {
-  background-color: #fff;
-  border-color: #ccc;
-  transition: background-color .2s ease;
-}
-.views-displays .tabs .action-list li:hover {
-  background-color: #2196f3;
-}
-.views-displays .tabs .action-list li input {
-  color: #333;
-}
-.views-displays .tabs .action-list li:hover input {
-  color: #fff;
-}
-.views-displays .secondary .action-list li:first-child {
-  border-radius: 7px 7px 0 0;
+.views-displays ul.secondary li.is-active a.is-active {
+  background: #777;
+  border: 0;
 }
 
 /*
@@ -113,21 +137,43 @@
  * @todo create an issue to move this fix to upstream to Seven.
  */
 span.icon.add {
-  display: none;
+  visibility: hidden;
 }
+
 /* Replace with before pseudo-element. */
 .views-displays .tabs .add a:before {
   content: '+';
   position: absolute;
   font-weight: 900;
   left: 10px;
-  top: 0;
-  font-size: 1.6em;
-  color: #2196f3;
+  top: 5px;
+  font-size: 18px;
+  color: #85bef4;
 }
-.views-displays .tabs .action-list {
+.views-displays .tabs li.add ul.action-list {
+  border: 0;
+}
+.views-displays .tabs ul.action-list {
   top: 0;
   z-index: 100;
+}
+.views-displays .tabs .action-list li {
+  background-color: #333;
+  color: #fff;
+  transition: background-color .2s ease;
+}
+.views-displays .tabs .action-list li:hover {
+  background-color: #666;
+}
+.views-displays .tabs .action-list li input {
+  color: #fff;
+  text-align: left;
+}
+.views-displays .tabs .action-list li:hover input {
+  color: #fff;
+}
+.views-displays .secondary .action-list li:first-child {
+  border-radius: 7px 7px 0 0;
 }
 
 /* Stop field and input crashing in preview. */
@@ -148,9 +194,26 @@ div.views-ui-dialog .views-offset-top {
   border-top: 0;
 }
 
-.views-display-top, .view-preview-form__title, .form-edit .form-actions {
+/* Form actions. */
+.views-admin > .form-edit .form-actions {
+  background-color: #333;
+  padding: 10px 20px;
+  margin: 0 -20px;
+  border: 0;
+}
+.views-admin > .form-edit .form-actions input {
+  margin: 0 0 10px;
+}
+
+/* View preview. */
+.view-preview-form__title {
   background-color: #333;
   border: 0;
-  margin: 0;
-  padding: 0 20px;
+  padding: 10px 20px;
 }
+
+.details-wrapper .dropbutton-wrapper {
+  right: 20px; /* LTR */
+}
+
+

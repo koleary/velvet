@@ -10,7 +10,7 @@ label {
 }
 ul.tips,
 div.description,
-input.form-item .description {
+.form-item .description {
   max-width: 400px;
   margin-top: 5px;
   font-size: 12px;
@@ -21,32 +21,35 @@ input.form-item .description {
 .details-description,
 .details-wrapper .description {
   max-width: 400px;
-  font-size: 12px;
+  font-size: 90%;
   font-style: italic;
   color: #999;
   transition: color .5s ease;
 }
 ul.tips:hover,
 div.description:hover,
-input.form-item .description:hover,
+.form-item .description:hover,
 .details-description:hover,
 .details-wrapper .description:hover {
   color: #ddd;
 }
 
-/* Set size and position for all inputs. */
-input.form-select,
-input.form-text,
-input.form-tel,
-input.form-email,
-input.form-url,
-input.form-search,
-input.form-number,
-input.form-color,
-input.form-file,
-input.form-textarea,
-input.form-date,
-input.form-time {
+/* 
+ * Font size, margin padding and line height of inputs 
+ * MUST match buttons for inline alignment. 
+ */
+.form-select,
+.form-text,
+.form-tel,
+.form-email,
+.form-url,
+.form-search,
+.form-number,
+.form-color,
+.form-file,
+.form-textarea,
+.form-date,
+.form-time {
   display: block;
   box-sizing: border-box;
   max-width: 100%;
@@ -64,17 +67,17 @@ input.form-time {
   cursor: pointer;
 }
 /* Reduce contrast for fields against dark backround. */
-input.form-text,
-input.form-tel,
-input.form-email,
-input.form-url,
-input.form-search,
-input.form-number,
-input.form-color,
-input.form-file,
-input.form-textarea,
-input.form-date,
-input.form-time {
+.form-text,
+.form-tel,
+.form-email,
+.form-url,
+.form-search,
+.form-number,
+.form-color,
+.form-file,
+.form-textarea,
+.form-date,
+.form-time {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .2);
   background-color: #eee;
   border-color: #333;
@@ -82,25 +85,25 @@ input.form-time {
   color: #595959;
   transition: all .5s ease;
 }
-input.form-text:focus,
-input.form-tel:focus,
-input.form-email:focus,
-input.form-url:focus,
-input.form-search:focus,
-input.form-number:focus,
-input.form-color:focus,
-input.form-file:focus,
-input.form-textarea:focus,
-input.form-date:focus,
-input.form-time:focus {
+.form-text:focus,
+.form-tel:focus,
+.form-email:focus,
+.form-url:focus,
+.form-search:focus,
+.form-number:focus,
+.form-color:focus,
+.form-file:focus,
+.form-textarea:focus,
+.form-date:focus,
+.form-time:focus {
   border-color: #40b6ff;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, .125), 0 0 8px #40b6ff;
   background-color: #fff;
 }
 .radio,
 .checkbox,
-input[type="radio"],
-input[type="checkbox"] {
+[type="radio"],
+[type="checkbox"] {
   position: static;
   margin: 0;
 }
@@ -109,12 +112,12 @@ td .checkbox {
   line-height: normal;
   vertical-align: middle;
 }
-input.form-checkbox,
-input.form-radio {
+.form-checkbox,
+.form-radio {
   /* Add contrast for dark background. */
   box-shadow: 0 0 1px 1px #000;
 }
-input[type="radio"] {
+[type="radio"] {
   /* Add full circular radius. */
   border-radius: 50%;
 }
@@ -127,13 +130,12 @@ select {
   padding: 6px 20px 6px 6px; /* LTR */
   border: 1px solid #444;
   border-bottom: 1px solid #222;
-  border-radius: 3px;
-  background: url(../../../../misc/icons/333333/caret-down.svg) no-repeat 98% 63% #7b7b7b;
+  background: url(/core/misc/icons/333333/caret-down.svg) no-repeat 98% 63% #7b7b7b;
   box-shadow: inset 0 1px 0px 0px rgba(255, 255, 255, .3);
   vertical-align: bottom;
+  /* Must match other form elements and buttons for inline alighnment. */
   font-size: 14px;
   line-height: 16px;
-  color: #eee;
   text-shadow: none;
   transition: background 0.5s ease;
   -webkit-font-smoothing: antialiased;
@@ -142,8 +144,8 @@ select:hover,
 select:focus,
 select:active {
   border-radius: 3px;
-  color: #eee;
-  background: url(../../../../misc/icons/333333/caret-down.svg) no-repeat 98% 63% #666;
+  color: #fff;
+  background: url(/core/misc/icons/333333/caret-down.svg) no-repeat 98% 63% #666;
   box-shadow: inset 0 1px 0px 0px rgba(255, 255, 255, .3);
   outline: none;
 }
@@ -172,6 +174,7 @@ td select.form-select {
   .form--inline > .form-item {
     float: none;
     width: 100%;
+    margin-right: 0;
   }
   td select.form-select {
     max-width: 100px;

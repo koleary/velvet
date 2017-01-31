@@ -24,7 +24,7 @@ button.link:active {
 /* Styling for buttons. */
 .button {
   padding: 6px 1em;
-  background: #7b7b7b;
+  background: #777;
   border: 0;
   color: #fff;
   text-shadow: none;
@@ -33,7 +33,7 @@ button.link:active {
 .button:hover,
 .button:focus,
 .button:active {
-  background: #888;
+  background: #666;
   border: 0;
   box-shadow: none;
   outline: none;

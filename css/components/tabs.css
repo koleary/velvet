@@ -52,7 +52,7 @@ li.tabs__tab a {
 }
 
 /* JS dependent styling */
- .is-collapse-enabled .tabs__trigger {
+.is-collapse-enabled .tabs__trigger {
   border-radius: 0;
 }
 [dir="rtl"] .is-collapse-enabled .tabs__trigger {

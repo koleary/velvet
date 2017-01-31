@@ -45,6 +45,7 @@
 /* Copied styling for .button. */
 .js .dropbutton-widget {
   border: 0;
+  background: #777;
 }
 .js .dropbutton-multiple .dropbutton-widget {
   border-radius: 20em;
