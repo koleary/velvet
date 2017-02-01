@@ -1,31 +1,65 @@
 /**
- * Presentational styles for Drupal dialogs.
+ * Presentation styles for Drupal dialogs.
  */
 
+.ui-dialog .ajax-progress-throbber {
+  background-color: #222;
+}
+/* Provides more contrast to the darker modal. */
 .ui-widget-overlay {
   background: #666;
 }
 .ui-dialog {
   background: transparent;
+  box-shadow: 0 0 20px 5px rgba(0,0,0,0.3);
+  outline: none;
 }
-.ui-dialog .ui-dialog-titlebar,
-.ui-dialog .ui-widget-content.ui-dialog-buttonpane {
+
+/* The titlebar. */
+.ui-dialog .ui-dialog-titlebar {
+  padding: 20px 15px 0;
   background: #222;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  padding: 10px 20px;
 }
 .ui-dialog .ui-dialog-title {
   color: #ffffff;
 }
+.ui-dialog .views-filterable-options-controls .form-item {
+  margin: 0 0 20px;
+}
+
+/* The scrollable content area with custom webkit scrollbars. 
+ * @todo move custom scrollbars upstrean to Seven theme. 
+ */
 .ui-dialog .ui-widget-content.ui-dialog-content {
   background: #444;
 }
-.ui-dialog .ajax-progress-throbber {
-  background-color: #222;
+.views-ui-dialog .scroll {
+  overflow: auto;
+}
+.scroll::-webkit-scrollbar {
+  width: 14px;
+  width: 14px;
+  background: rgba(0,0,0,0.3);
+}
+.scroll::-webkit-scrollbar * {
+  background: rgba(0,0,0,0.3);
+}
+.scroll::-webkit-scrollbar-thumb {
+  box-sizing: border-box;
+  background: rgba(255,255,255,0.3) !important;
+  border: 3px solid rgba(0,0,0,0.6);  
+  border-radius: 15px;
+}
+.scroll::-webkit-scrollbar-corner {
+  background: #333 !important;
+}
+
+/* The bouttonpane. Removing 5px from the h-padding means no RTL needed! */
+.ui-dialog .ui-widget-content.ui-dialog-buttonpane {
+  padding: 20px 15px 10px;
+  background: #222;
 }
 .ui-dialog-buttonpane .button {
-  margin: 0 0 10px;
+  margin: 0 5px 10px;
 }
+

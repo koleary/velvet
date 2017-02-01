@@ -63,7 +63,11 @@ td > .form-wrapper > .button {
 }
 td:first-child,
 th:first-child {
-  padding-left: 20px; /* LTR */
+  padding-left: 20px;
+}
+td:last-child,
+th:last-child {
+  padding-right: 20px;
 }
 
 /* Remove hover with no data. */
@@ -134,7 +138,7 @@ th.is-active > a:focus:after {
   /* @todo Figure out a way that doesn't assume actions are always the last cell. */
   td:last-child,
   td.block:last-child {
-    overflow: visible;
+    overflow: hidden;
   }
 }
 @media all and (min-width: 40em) {
