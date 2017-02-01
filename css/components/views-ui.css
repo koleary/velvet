@@ -184,7 +184,7 @@ span.icon.add {
 
 /* Special cases for jquery dialogs. */
 div.views-ui-dialog .views-offset-top {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #777;
   background-color: #333 !important;
 }
 .views-ui-dialog .views-offset-bottom {
@@ -214,6 +214,10 @@ div.views-ui-dialog .views-offset-top {
 
 .details-wrapper .dropbutton-wrapper {
   right: 20px; /* LTR */
+}
+
+.views-filterable-options-controls .form-item {
+  margin: 0;
 }
 
 

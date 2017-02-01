@@ -23,7 +23,7 @@ button.link:active {
 
 /* Styling for buttons. */
 .button {
-  padding: 6px 1em;
+  padding: 6px 14px;
   background: #777;
   border: 0;
   color: #fff;
@@ -41,7 +41,8 @@ button.link:active {
   text-shadow: none;
 }
 .button-action,
-input.button--primary {
+input.button--primary,
+.form-actions .button:first-child { /* Conventioally the first item is primary. */
   background: #277abd none;
   transition: background .5s ease;
 }

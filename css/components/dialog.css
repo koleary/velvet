@@ -2,6 +2,9 @@
  * Presentational styles for Drupal dialogs.
  */
 
+.ui-widget-overlay {
+  background: #666;
+}
 .ui-dialog {
   background: transparent;
 }
@@ -12,12 +15,10 @@
   border-top-right-radius: 0;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  padding: 10px 20px;
 }
 .ui-dialog .ui-dialog-title {
   color: #ffffff;
-}
-.ui-dialog .ui-icon.ui-icon-closethick {
-  visibility: hidden;
 }
 .ui-dialog .ui-widget-content.ui-dialog-content {
   background: #444;
@@ -25,4 +26,6 @@
 .ui-dialog .ajax-progress-throbber {
   background-color: #222;
 }
-
+.ui-dialog-buttonpane .button {
+  margin: 0 0 10px;
+}
