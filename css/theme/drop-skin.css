@@ -3,7 +3,7 @@
  * Visual styling for dropbuttons.
  */
 
-/* Reset styling for all elements. */
+/* Reset styling for all elements. KEEP */
 .js .dropbutton .dropbutton-action > input,
 .js .dropbutton .dropbutton-action > a,
 .js .dropbutton .dropbutton-action > button {
@@ -13,7 +13,6 @@
   margin: 0;
   font-weight: 600;
   line-height: normal;
-  -webkit-font-smoothing: antialiased;
   text-align: left; /* LTR */
 }
 [dir="rtl"].js .dropbutton .dropbutton-action > input,
@@ -22,34 +21,14 @@
   text-align: right;
   margin-left: 0; 
 }
-.js .dropbutton-action.last {
-  border-radius: 0 0 0 1em; /* LTR */
-}
-[dir="rtl"] .js .dropbutton-action.last {
-  border-radius: 0 0 1em 0;
-}
 
-@media screen and (min-width: 37.5625em) { /* 601px */
-  .dropbutton li {
-    display: inline-block;
-  }
-  .dropbutton li + li {
-    margin-left: 1em;
-    margin-top: 0;
-  }
-  .js .dropbutton li + li {
-    margin-left: 0;
-  }
+/* Position like other buttons. */
+.dropbutton-wrapper {
+  margin: 0 2px;
 }
-
-/* Copied styling for .button. */
 .js .dropbutton-widget {
   border: 0;
   background: #777;
-}
-.js .dropbutton-multiple .dropbutton-widget {
-  border-radius: 20em;
-  background-color: #7b7b7b;
 }
 .dropbutton-multiple.open .dropbutton-widget {
   border-radius: 1em;
@@ -58,47 +37,18 @@
 .js .dropbutton-widget .dropbutton-action input,
 .js .dropbutton-widget .dropbutton-action button {
   border-radius: 20em 0 0 20em; /* LTR */
-  padding: 4px 1em;
+  padding: 6px 14px;
   display: block;
   width: 100%;
 }
-[dir="rtl"].js .dropbutton-widget .dropbutton-action a,
-[dir="rtl"].js .dropbutton-widget .dropbutton-action input,
-[dir="rtl"].js .dropbutton-widget .dropbutton-action button {
-  border-radius: 0 20em 20em 0;
-}
-.js .dropbutton-widget .dropbutton-action a:focus,
-.js .dropbutton-widget .dropbutton-action input:focus,
-.js .dropbutton-widget .dropbutton-action button:focus {
-  text-decoration: underline;
-}
-.js .dropbutton-multiple.open .dropbutton-action a,
-.js .dropbutton-multiple.open .dropbutton-action .button {
-  border-radius: 0;
-}
-.js .dropbutton-multiple.open .dropbutton-action:first-child a,
-.js .dropbutton-multiple.open .dropbutton-action:first-child .button {
-  border-radius: 0.9em 0 0 0; /* LTR */
-}
-[dir="rtl"].js .dropbutton-multiple.open .dropbutton-action:first-child a,
-[dir="rtl"].js .dropbutton-multiple.open .dropbutton-action:first-child .button {
-  border-radius: 0 0.9em 0 0;
-}
-.js .dropbutton-multiple.open .dropbutton-action:last-child a,
-.js .dropbutton-multiple.open .dropbutton-action:last-child .button {
-  border-radius: 0 0 0 0.9em; /* LTR */
-}
-[dir="rtl"].js .dropbutton-multiple.open .dropbutton-action:last-child a,
-[dir="rtl"].js .dropbutton-multiple.open .dropbutton-action:last-child .button {
-  border-radius: 0 0 0.9em 0;
-}
-.js .dropbutton-wrapper .dropbutton-widget .dropbutton-action a:active,
-.js .dropbutton-wrapper .dropbutton-widget .dropbutton-action input:active,
-.js .dropbutton-wrapper .dropbutton-widget .dropbutton-action button:active {
-  text-decoration: none;
-}
 .dropbutton .secondary-action {
-  border-top: 1px solid #7b7b7b;
+  border-top: 1px solid #777;
+}
+.js .dropbutton-action.last {
+  border-radius: 0 0 0 1em; /* LTR */
+}
+[dir="rtl"] .js .dropbutton-action.last {
+  border-radius: 0 0 1em 0;
 }
 
 /* Single button. */
@@ -112,9 +62,7 @@
   border: 0;
   border-radius: 20em !important;
   text-decoration: none;
-  font-weight: 600;
   transition: background 0.5s;
-  -webkit-font-smoothing: antialiased;
   width: auto!important;
 }
 .dropbutton-single .dropbutton-action a:hover,
@@ -129,11 +77,11 @@
 
 /* The dropdown trigger. */
 .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button {
-  border-left: 1px solid #7b7b7b; /* LTR */
+  border-left: 1px solid #777; /* LTR */
   outline: none;
 }
 [dir="rtl"].js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button {
-  border-right: 1px solid #7b7b7b;
+  border-right: 1px solid #777;
   border-left: 0;
 }
 .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button {
@@ -153,28 +101,8 @@
   text-decoration: none;
   z-index: 3;
 }
-.dropbutton-arrow {
-  right: 35%; /* LTR */
-  top: 54%;
-}
-[dir="rtl"] .dropbutton-arrow {
-  left: 35%;
-  right: auto;
-}
-.dropbutton-multiple.open .dropbutton-arrow {
-  border-top-color: transparent;
-  top: 0.6667em;
-}
-
-/* Form edit action theming. from seven .button--primary. */
-.js .form-actions .dropbutton .dropbutton-action > * {
-  font-weight: 700;
-}
-.js .form-actions .dropbutton-widget {
-  position: relative;
-}
 .dropbutton-widget {
-  background: #7b7b7b none;
+  background: #777 none;
   border: 0;
   border-radius: 1em;
   color: #eee;
@@ -184,7 +112,7 @@
   box-shadow: 0 2px 2px 1px rgba(0,0,0,0.5);
 }
 .dropbutton-toggle button {
-  background: #7b7b7b none;
+  background: #777 none;
   border-bottom-right-radius: 1em; /* LTR */
   border-top-right-radius: 1em; /* LTR */
   border-style: solid;
@@ -201,7 +129,7 @@
 }
 .dropbutton .dropbutton-action:hover,
 .dropbutton a:hover {
-  background: #6b6b6b none;
+  background: #666 none;
   border-bottom-left-radius: 1em; /* LTR */
   border-top-left-radius: 1em; /* LTR */
 }
@@ -216,28 +144,16 @@
   color: #eee;
   font-size: 90%;
   line-height: 1.8;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 .dropbutton:hover a {
   color: #fff;
 }
 
-/* Make an arrow out of borders with some fancy CSS. */
+/* Change the arrow color and position. */
 span.dropbutton-arrow {
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  border-style: solid;
-  border-width: 0.3333em 0.3333em 0;
-  display: block;
-  height: 0;
-  line-height: 0;
-  position: absolute;
   right: 40%;
   top: 50%;
-  margin-top: -0.1666em;
-  width: 0;
-  overflow: hidden;
   color: #fff;
 }
 .js .dropbutton-toggle .dropbutton-arrow:hover {
@@ -254,8 +170,7 @@ td .dropbutton-multiple .dropbutton {
   border-left: 0;
 }
 td .dropbutton .secondary-action {
-  border-top-color: #000;
+  border-top-color: #555;
 }
-.dropbutton-multiple .dropbutton .button--primary {
-  background: #277abd none;
-}
+
+

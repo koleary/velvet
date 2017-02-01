@@ -127,8 +127,7 @@ th.is-active > a:focus:after {
 /* Squeeze as much into the narrow space as possible. */
 @media all and (min-width: 0em) {
   td,
-  td.block,
-  td select.form-select {
+  td.block {
     max-width: 80px;
     font-size: 95%;
     letter-spacing: -0.2px;
@@ -138,10 +137,10 @@ th.is-active > a:focus:after {
   /* @todo Figure out a way that doesn't assume actions are always the last cell. */
   td:last-child,
   td.block:last-child {
-    overflow: hidden;
+    overflow: visible;
   }
 }
-@media all and (min-width: 40em) {
+@media all and (min-width: 600px) {
   td.block {
     max-width: 100%;
     overflow: hidden;
