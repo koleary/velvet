@@ -1,0 +1,28 @@
+/**
+ * @file
+ * Styles for Tour theme.
+ */
+
+/* Default styles for the container */
+.joyride-tip-guide {
+  background: #333;
+  background: rgba(0,0,0, 0.8);
+  border-radius: 3px;
+}
+
+/* Typography */
+.joyride-tip-guide h2 {
+  color: inherit;
+}
+.joyride-tip-guide p {
+  line-height: inherit;
+}
+.joyride-tip-guide a {
+  color: inherit;
+}
+
+/* Button Style */
+.joyride-tip-guide .joyride-next-tip {
+  margin: 0;
+  background: #277abd;
+}

@@ -16,7 +16,8 @@
 }
 
 /* The titlebar. */
-.ui-dialog .ui-dialog-titlebar {
+.ui-dialog div.ui-dialog-titlebar,
+.ui-dialog div.ui-widget-header {
   padding: 20px 15px 0;
   background: #222;
 }
@@ -30,7 +31,7 @@
 /* The scrollable content area with custom webkit scrollbars. 
  * @todo move custom scrollbars upstrean to Seven theme. 
  */
-.ui-dialog .ui-widget-content.ui-dialog-content {
+.ui-dialog div.ui-widget-content.ui-dialog-content {
   background: #444;
 }
 .views-ui-dialog .scroll {
@@ -55,7 +56,7 @@
 }
 
 /* The bouttonpane. Removing 5px from the h-padding means no RTL needed! */
-.ui-dialog .ui-widget-content.ui-dialog-buttonpane {
+.ui-dialog div.ui-widget-content.ui-dialog-buttonpane {
   padding: 20px 15px 10px;
   background: #222;
 }

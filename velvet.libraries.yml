@@ -26,14 +26,6 @@ global-styling:
   dependencies:
     - system/admin
 
-node-form:
-  version: VERSION
-  css:
-    layout:
-      css/layout/node-add.css: {}
-  dependencies:
-    - node/form
-
 vertical-tabs:
   version: VERSION
   css:

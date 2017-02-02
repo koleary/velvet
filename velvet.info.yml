@@ -17,6 +17,10 @@ libraries-override:
     css:
       component:
         css/components/dropbutton.component.css: false
+  seven/ckeditor-dialog:
+    css:
+      theme:
+        css/theme/ckeditor-dialog.css: false
 libraries-extend:
   core/ckeditor:
     - velvet/ckeditor-dialog
