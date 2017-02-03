@@ -6,11 +6,11 @@ dependencies:
   theme:
     - velvet
 _core:
-  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+  default_config_hash: VtE0EDN1I3_aeAf2Jiorwvjo2t_-_3VDc4x8hzxWoao
 id: velvet_breadcrumbs
 theme: velvet
 region: breadcrumb
-weight: -6
+weight: -4
 provider: null
 plugin: system_breadcrumb_block
 settings:

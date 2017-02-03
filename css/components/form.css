@@ -13,8 +13,11 @@ label,
   font-weight: bold;
 }
 .label,
-.form-composite > legend {
+.form-composite > legend, {
   display: block;
+}
+.fieldgroup:not(.form-composite) > legend {
+  text-transform: none;
 }
 ul.tips,
 div.description,
@@ -41,11 +44,6 @@ div.description:hover,
 .details-wrapper .description:hover {
   color: #ddd;
 }
-
-/* 
- * Font size, margin padding and line height of inputs 
- * MUST match buttons for inline alignment. 
- */
 input.form-select,
 input.form-text,
 input.form-tel,
@@ -132,6 +130,7 @@ select:active {
   outline: none;
 }
 
+/* Reset vertical rhythm to push downward. */
 .form-item {
   margin: 0 0 10px;
 }
@@ -187,7 +186,12 @@ td .form-type-select > .form-select {
     width: 100%;
   }
   td .form-type-select > .form-select {
-    max-width: 80px;
+    /* Must use fixed height so padding does not hide descenders. */
+    height: 24px;
+    max-width: 100px;
+    min-width: 70px;
+    line-height: 14px;
+    padding: 0 18px 0 4px;
     font-size: inherit;
     letter-spacing: inherit;
     overflow: hidden !important;
@@ -202,12 +206,15 @@ td .form-type-select > .form-select {
   .form--inline .form-actions {
     width: auto;
   }
-  td selectinput.form-select {
-    max-width: 200px;
+  td .form-type-select > .form-select {
+    width: auto;
   }
   .details-wrapper > .form-item select {
     width: auto;
   }
 }
 
+.form-composite > .fieldset-wrapper > .description, .form-item .description {
+  font-size: inherit;
+}
 

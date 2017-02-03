@@ -3,7 +3,6 @@
  */
 body {
   background: #444;
-  font: normal 81.3%/1.538em "Lucida Grande", 'Lucida Sans Unicode','liberation sans', sans-serif;
   color: #ddd;
 }
 a,
@@ -21,8 +20,7 @@ a:focus,
 hr {
   background: #fff;
 }
-summary,
-.fieldgroup:not(.form-composite) > legend {
+summary {
   text-transform: none;
 }
 h1,
@@ -71,5 +69,8 @@ code,
 pre {
   color: #88cc00;
   font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console","Liberation Mono", monospace;
+}
+option {
+  overflow: visible;
 }
 

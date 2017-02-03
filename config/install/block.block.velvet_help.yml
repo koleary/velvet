@@ -6,11 +6,11 @@ dependencies:
   theme:
     - velvet
 _core:
-  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+  default_config_hash: gMYFyEDs0RYTe-57pXyK4f9cNkc8z42HO2pptdPgYIo
 id: velvet_help
 theme: velvet
 region: help
-weight: -6
+weight: -4
 provider: null
 plugin: help_block
 settings:

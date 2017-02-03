@@ -2,11 +2,7 @@
  * Tabs.
  */
 
-/* 
- * Reset styles from Seven. 
- */
-
- /* Reset border, background. */
+/* Reset border, background. */
 .tabs__tab,
 .tabs.primary,
 .tabs.secondary,
@@ -15,7 +11,7 @@
 .is-horizontal .tabs.primary .tabs__tab.is-active,
 [dir="rtl"] .is-collapse-enabled .tabs__trigger,
 [dir="rtl"] .is-horizontal .tabs.primary .tabs__tab.is-active {
-  background: transparent;
+  background-color: transparent;
   border: 0;
 }
 /* Reset color. */
@@ -43,56 +39,51 @@
   color: #eee;
   background-color: #000;
 }
-/* Remove link underline. */
+/* Remove underline */
 .tabs a:hover,
 .tabs a:focus {
   text-decoration: none;
 }
 
-/* 
- * Restyle for Velvet. 
- */
-
-/* Remove padding from tab list, separate with border instead. */
-.tabs.is-open {
-  padding: 0;
-  border-bottom: 1px solid #666;
-}
-/* Match all active tabs to the background color of Velvet content, */
-.is-open .tabs__tab.is-active {
-  background-color: #444;
-  color: #fff;
-}
+.tabs.is-open
 .is-collapse-enabled .tabs:before,
 .is-horizontal .tabs:before {
   background: #444;
 }
+
 /* Push the tabs to the viewport edge. */
 .is-horizontal .tabs:before,
 .is-collapse-enabled .tabs:before {
   left: 0;
   right: 0;
 }
-.block.block-local-tasks-block {
+div.block.block-local-tasks-block {
   margin: 0 -20px;
 }
 
-/* Re-style the primary tabs */
+/* Primary tabs */
 .tabs.primary a:focus {
   color: #fff;
   background-color: #333;
+  text-decoration: none;
 }
+.tabs.primary .is-active a:focus {
+  text-decoration: none;
+}
+
 /* With collapse enabled remove border. */
-.tabs.primary .tabs__tab.is-active {
-  border: 0;
-}
 .tabs.primary .tabs__tab.is-active a {
   background: #444;
 }
 .is-collapse-enabled .tabs.primary a.is-active:before {
   content: none;
 }
-/* Primary tabs in horizontal state */
+.is-open .tabs__tab.is-active {
+  background-color: #444;
+  color: #fff;
+}
+
+/* Styles for the horizontal state. */
 .is-horizontal .tabs__tab {
   text-align: center;
 }
@@ -104,11 +95,7 @@
   border-bottom: 0;
 }
 
-/* Secondary tabs. */
-.tabs.secondary {
-  margin-top: 4px;
-  border-bottom-color: #777;
-}
+/* Secondary tabs */
 .tabs.secondary .tabs__tab + .tabs__tab {
   border-top: 0;
 }
@@ -157,7 +144,8 @@
 .tabs.secondary a:focus {
   text-decoration: underline;
 }
-/* Secondary tabs in horizontal state */
+
+/* Styles for the horizontal state */
 .is-horizontal .tabs.secondary .tabs__tab {
   border-bottom: 1px solid #777;
   border-left: 4px solid transparent;
@@ -171,3 +159,4 @@
 .is-horizontal .tabs.secondary .tabs__tab:focus {
   border-bottom-color: #008ee6;
 }
+

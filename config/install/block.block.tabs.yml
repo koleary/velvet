@@ -3,19 +3,17 @@ status: true
 dependencies:
   theme:
     - velvet
-_core:
-  default_config_hash: UVoSGepwah6FU9u8fmAEgrH_9tRVWRF9hN1kXq9xJLg
-id: velvet_local_tasks
+id: tabs
 theme: velvet
-region: header
-weight: 1
+region: pre_content
+weight: 0
 provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
-  label: 'Tabs primary'
+  label: 'Tabs secondary'
   provider: core
   label_display: '0'
-  primary: true
-  secondary: false
+  primary: false
+  secondary: true
 visibility: {  }

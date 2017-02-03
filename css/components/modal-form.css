@@ -1,44 +1,64 @@
-/* Modal table cell form. */
+/* 
+ * @file
+ * Modal table cell form. 
+ */
 
-tr.field-plugin-settings-editing {
-  box-sizing: border-box;
-  background: #333;
-  display: block;
-  float: left;
-  position: static;
-  padding: 0;
-  width: 200%;
-  max-width: 400px;
-}
-.field-ui-overview .field-plugin-settings-editing td {
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  background: #333;
-  border-bottom: 0;
-  vertical-align: top;
-}
-div.ajax-new-content {
-  box-sizing: border-box;
+/* Must use these verbose selectors and IDs to override field-UI css. */
+#field-display-overview tr.field-plugin-settings-editing {
+  position: absolute;
   width: calc(100% - 40px);
-  padding-left: 20px;
+  height: 100%;
+  background: #333;
+  margin: 0;
+  padding: 10px 20px;
+  z-index: 100;
 }
-.ajax-new-content div.description.description {
+tr.field-plugin-settings-editing td {
+  display: block;
+  position: relative;
+  margin: 0 0 10px;
+  padding: 0;
+  border: 0;
   white-space: normal;
 }
-div.ajax-new-content > div {
-  box-sizing: border-box;
-  width: calc(100% - 40px);
-  padding-bottom: 0;
-  margin: 0;
+#field-display-overview .field-plugin-settings-edit-form .form-item,
+#field-display-overview .field-plugin-settings-edit-form .form-submit {
+  display: block;
+  margin: 0 0 10px;
 }
-div.ajax-new-content div.form-actions {
-  padding: 0;
-  margin: 0;
+@media all and (min-width: 0em) {
+  #field-display-overview .field-plugin-settings-edit-form .form-item,
+  #field-display-overview .field-plugin-settings-edit-form .form-submit {
+    display: block;
+    margin: 0 0 10px;
+  }
+  .field-ui-overview .field-plugin-settings-edit-wrapper {
+    position: absolute;
+    box-sizing: border-box;
+    left: calc(100% - 40px);
+    background: #444;
+    height: 39px;
+    margin: -20px 0;
+    padding: 12px;
+    width: 40px;
+    z-index: 99;
+  }
+  #field-display-overview input.field-plugin-settings-edit {
+    position: static;
+    margin: 0;
+    padding: 0;
+  }
 }
-div.field-plugin-settings-edit-form .form-submit {
-  margin-bottom: 10px;
-  display: inline-block;
-  float: left;
-  width: auto;
+@media all and (min-width: 600px) {
+  #field-display-overview .field-plugin-settings-edit-form .form-submit {
+    display: inline-block;
+  }
+ .field-ui-overview .field-plugin-settings-edit-wrapper {
+    position: static;
+    background: transparent;
+    height: auto;
+    margin: inherit;
+    padding: inherit;
+    width: auto;
+  }
 }

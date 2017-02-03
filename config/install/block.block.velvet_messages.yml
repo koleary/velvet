@@ -6,7 +6,7 @@ dependencies:
   theme:
     - velvet
 _core:
-  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+  default_config_hash: bQKS4w2LIfB1x2gOPc5vSxsQSN3y592-SZjEPElIrXQ
 id: velvet_messages
 theme: velvet
 region: highlighted
