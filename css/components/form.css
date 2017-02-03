@@ -3,41 +3,36 @@
  * Visual styling for forms.
  */
 
-label {
+label,
+.label,
+.form-composite > legend  {
   margin: 0;
-  font-size: 12px;
   padding: 0 0 3px;
+  font-size: 12px;
+  line-height: 16px;
   font-weight: bold;
 }
 .label,
 .form-composite > legend {
   display: block;
-  margin: 0;
-  padding: 0 0 3px;
-  font-weight: bold;
 }
 ul.tips,
 div.description,
-.form-item .description {
+.form-item .description,
+.details-description,
+.details-wrapper > .description {
   max-width: 400px;
-  margin: 0 0 4px;
+  margin: 0 0 10px;
   font-size: 12px;
   font-style: italic;
   color: #aaa;
   transition: color .5s ease;
 }
+
 /* Override added colon from classy. */
 .container-inline label:after, 
 .container-inline .label:after {
   content: '';
-}
-.details-description,
-.details-wrapper .description {
-  max-width: 400px;
-  font-size: 12px;
-  font-style: italic;
-  color: #999;
-  transition: color 0.5s ease;
 }
 ul.tips:hover,
 div.description:hover,
@@ -109,7 +104,6 @@ td .checkbox {
 }
 input.form-checkbox,
 input.form-radio {
-  /* Add contrast for dark background. */
   box-shadow: 0 0 1px 1px #000;
 }
 select {
@@ -117,12 +111,10 @@ select {
   -moz-appearance: none;
   box-sizing: border-box;
   padding: 6px 20px 6px 6px; /* LTR */
-  border: 1px solid #444;
-  border-bottom: 1px solid #222;
+  border: 1px solid #777;
   background: url(/core/misc/icons/333333/caret-down.svg) no-repeat 98% 63% #7b7b7b;
   box-shadow: inset 0 1px 0px 0px rgba(255, 255, 255, .3);
   vertical-align: bottom;
-  /* Must match other form elements and buttons for inline alighnment. */
   font-size: 14px;
   line-height: 16px;
   color: #fff;
@@ -145,27 +137,23 @@ select:active {
 }
 
 /* Inline form items. */
-.form--inline .form-item {
-  margin: 2px 2px 0;
-  padding: 10px 0 0;
-}
-/* Push the label into the padding of the field. 
- * This prevents extra vertical space when inline buttons wrap. 
- */
-.form--inline .form-item label {
-  margin: -12px 0 0;
-}
-/* -2 pushes first child back into alignment so no RTL is needed. */
 .form--inline.clearfix {
   margin: 0 -2px 10px;
+  padding: 0;
 }
-/* @todo move inline form actions upstream to Seven. */
+.form--inline .form-item,
 .form--inline .form-actions {
-  clear: none;
-  float: left;
+  display: inline-block;
+  float: none;
+  clear: both;
   width: auto;
-  margin: 0;
-  padding: 18px 2px 0
+  margin: 4px 2px 0;
+  padding: 0;
+  vertical-align: bottom;
+}
+/* Adds margin top needed when button wraps. */
+.form--inline .form-actions {
+  margin: 18px 2px 0;
 }
 
 /* Fieldsets. */
@@ -192,14 +180,10 @@ td .form-type-select > .form-select {
 .details-wrapper > .form-item select {
   width: auto;
 }
+
 @media all and (min-width: 0em) {
-  .form--inline > .form-item {
-    float: none;
-    width: 100%;
-  }
+  .form--inline > .form-item,
   .form--inline .form-actions {
-    clear: none;
-    float: none;
     width: 100%;
   }
   td .form-type-select > .form-select {
@@ -214,22 +198,12 @@ td .form-type-select > .form-select {
   }
 }
 @media all and (min-width: 600px) {
+  .form--inline > .form-item,
+  .form--inline .form-actions {
+    width: auto;
+  }
   td selectinput.form-select {
     max-width: 200px;
-  }
-  .form--inline > .form-item {
-    float: left; /* LTR */
-    width: auto;
-  }
-  .form--inline .form-actions {
-    clear: none;
-    float: left;
-    width: auto;
-    margin: 0;
-    padding: 19px 2px 0;
-  }
-  [dir="rtl"] .form--inline > .form-item {
-    float: right;
   }
   .details-wrapper > .form-item select {
     width: auto;

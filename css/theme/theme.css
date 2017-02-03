@@ -6,3 +6,6 @@
 .page-title {
   display: inline-block;
 }
+.breadcrumb {
+  line-height: 1.3em
+}
