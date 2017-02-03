@@ -44,13 +44,14 @@ button.link:active {
   text-shadow: none;
 }
 .button-action,
-input.button--primary,
-.form-actions .button:first-child { /* Conventioally the first item is primary. */
+.button--primary {
   background: #277abd;
   transition: background 0.5s ease;
   outline: none;
 }
 .button-action:hover,
+.button-action:focus,
+.button-action:active,
 .button--primary:hover,
 .button--primary:focus,
 .button--primary:active {

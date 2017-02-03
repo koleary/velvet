@@ -33,15 +33,32 @@
 .system-modules td details summary span {
   color: #eee;
 }
-.system-modules > details {
-  margin: 0 -20px; /* Push to viewport edge. */
+/* Override datails backgrounds. */
+.system-modules details,
+.system-modules details summary,
+.system-modules .details-wrapper,
+.system-modules details[open],
+.system-modules details[closed],
+.system-modules details[open] > summary:hover 
+.system-modules details[closed] > summary:hover {
+  background: transparent;
+}
+.system-modules [open] summary,
+.system-modules [closed] summary {
+  border: 0;
+  margin: 0 -20px;
+  padding: 0 20px;
+}
+.system-modules details,
+.system-modules details summary,
+.system-modules details summary:hover {
+  background: #333;
+  color: #fff;
 }
 .system-modules td details {
   height: auto;
 }
 .system-modules details[open] {
-  background: #333;
-  background-color: #333;
   padding-bottom: 0;
 }
 .system-modules .details-wrapper {
@@ -51,19 +68,10 @@
   width: auto;
 }
 .system-modules summary {
-  border-bottom-color: #444;
+  border-bottom-color: transparent;
 }
 .system-modules .package-listing {
   margin-bottom: 0;
-}
-.system-modules-uninstall td:first-child {
-  width: 30%;
-}
-.system-modules-uninstall td:nth-child(2) {
-  width: 30%;
-}
-.system-modules-uninstall td:nth-child(3) {
-  width: 40%;
 }
 .admin-requirements, 
 .admin-required {

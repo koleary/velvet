@@ -103,13 +103,10 @@ th > a {
   color: #ddd;
 }
 th > a:after {
-  bottom: -8px;
+  bottom: -9px;
 }
 th.is-active > a {
-  color: #fff;
-}
-th.is-active > a:after {
-  border-bottom-color: #fff;
+  color: #eee;
 }
 th > a:hover,
 th > a:focus,
@@ -117,18 +114,28 @@ th.is-active > a:hover,
 th.is-active > a:focus {
   color: #fff;
 }
+th.is-active > a:after {
+  border-bottom-color: #277abd;
+}
 th > a:hover:after,
 th > a:focus:after,
 th.is-active > a:hover:after,
 th.is-active > a:focus:after {
-  border-bottom-color: #eee;
+  border-bottom-color: #2b8bd8;
+}
+a .tablesort--asc,
+a:hover .tablesort--asc {
+  background-image: url(/core/misc/icons/008ee6/twistie-down.svg);
+}
+a .tablesort--desc,
+a:hover .tablesort--desc {
+  background-image: url(/core/misc/icons/008ee6/twistie-up.svg);
 }
 
 /* Squeeze as much into the narrow space as possible. */
 @media all and (min-width: 0em) {
   td,
   td.block {
-    max-width: 80px;
     font-size: 95%;
     letter-spacing: -0.2px;
     overflow: hidden;
