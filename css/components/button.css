@@ -24,7 +24,8 @@ button.link:active {
 }
 
 /* Styling for buttons. */
-.button {
+.button,
+.button--danger {
   margin: 0;
   padding: 6px 14px;
   background: #777;
@@ -46,8 +47,8 @@ button.link:active {
 .button-action,
 .button--primary {
   background: #277abd;
-  transition: background 0.5s ease;
   outline: none;
+  transition: background 0.5s ease;
 }
 .button-action:hover,
 .button-action:focus,
@@ -56,6 +57,28 @@ button.link:active {
 .button--primary:focus,
 .button--primary:active {
   background: #2b8bd8;
+}
+.button--danger {
+  background: #777;
+  padding: 6px 14px;
+  border-radius: 20em;
+  -webkit-appearance: inherit;
+  -moz-appearance: inherit;
+  color: #ddd;
+  font-weight: 600;
+  text-decoration: none;
+}
+.button--danger:hover, 
+.button--danger:focus, 
+.button--danger:active {
+  background: #c72100;
+  padding: 6px 14px;
+  border-radius: 20em;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow: none;
+  box-shadow: none;
 }
 
 @media screen and (min-width: 0em) {
