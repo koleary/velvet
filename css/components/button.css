@@ -26,9 +26,9 @@ button.link:active {
 /* Styling for buttons. */
 .button,
 .button--danger {
-  margin: 0;
-  padding: 6px 14px;
   background: #777;
+  margin: 0 2px 0;
+  padding: 6px 14px;
   border: 0;
   color: #fff;
   text-shadow: none;
@@ -37,6 +37,7 @@ button.link:active {
 .button:hover,
 .button:focus,
 .button:active {
+  margin: 0 2px 0;
   background: #666;
   border: 0;
   box-shadow: none;
@@ -46,6 +47,7 @@ button.link:active {
 }
 .button-action,
 .button--primary {
+  margin: 0 2px 0;
   background: #277abd;
   outline: none;
   transition: background 0.5s ease;
@@ -59,8 +61,8 @@ button.link:active {
   background: #2b8bd8;
 }
 .button--danger {
-  background: #777;
-  padding: 6px 14px;
+  display: inline-block;
+  margin: 0 2px 0;
   border-radius: 20em;
   -webkit-appearance: inherit;
   -moz-appearance: inherit;
@@ -75,14 +77,25 @@ button.link:active {
   padding: 6px 14px;
   border-radius: 20em;
   color: #fff;
-  font-weight: 600;
   text-decoration: none;
   text-shadow: none;
   box-shadow: none;
 }
+.button--danger:disabled,
+.button--danger.is-disabled {
+  background: #555;
+  cursor: default;
+  box-shadow: none;
+  padding: 6px 14px;
+  border: 0;
+  color: #777;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+}
 
 @media screen and (min-width: 0em) {
-  .button {
+  .button,
+  .button--danger {
     width: 100%;
     max-width: 100%;
   }
@@ -91,9 +104,13 @@ button.link:active {
   }
 }
 @media screen and (min-width: 600px) {
-  .button {
+  .button  {
+    float: left; /* LTR */
     width: auto;
     min-width: 100px;
+  }
+  [dir="rtl"] .button  {
+    float: right;
   }
   /* spacing between inline buttons. */
   .form-actions .button {

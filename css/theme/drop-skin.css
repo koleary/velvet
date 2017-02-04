@@ -3,7 +3,7 @@
  * Visual styling for dropbuttons.
  */
 
-/* Reset styling for all elements. KEEP */
+/* Reset styling for all elements. */
 .js .dropbutton .dropbutton-action > input,
 .js .dropbutton .dropbutton-action > a,
 .js .dropbutton .dropbutton-action > button {
@@ -11,7 +11,7 @@
   color: #fff;
   padding: 0;
   margin: 0;
-  font-weight: 600;
+  font-weight: 400;
   line-height: normal;
   text-align: left; /* LTR */
 }
@@ -28,7 +28,6 @@
 }
 .js .dropbutton-widget {
   border: 0;
-  background: #777;
 }
 .dropbutton-multiple.open .dropbutton-widget {
   border-radius: 1em;
@@ -42,7 +41,7 @@
   width: 100%;
 }
 .dropbutton .secondary-action {
-  border-top: 1px solid #777;
+  border-top: 1px solid rgba(255,255,255,0.5);
 }
 .js .dropbutton-action.last {
   border-radius: 0 0 0 1em; /* LTR */
@@ -60,7 +59,7 @@
 .dropbutton-single .dropbutton-action a {
   padding: 4px 1em;
   border: 0;
-  border-radius: 20em !important;
+  border-radius: 0;
   text-decoration: none;
   transition: background 0.5s;
   width: auto!important;
@@ -77,11 +76,11 @@
 
 /* The dropdown trigger. */
 .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button {
-  border-left: 1px solid #777; /* LTR */
+  border-left: 1px solid rgba(255,255,255,0.5); /* LTR */
   outline: none;
 }
 [dir="rtl"].js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button {
-  border-right: 1px solid #777;
+  border-right: 1px solid rgba(255,255,255,0.5);
   border-left: 0;
 }
 .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button {
@@ -98,11 +97,10 @@
 }
 .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:hover,
 .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:focus {
-  text-decoration: none;
+  background:transparent;
   z-index: 3;
 }
 .dropbutton-widget {
-  background: #777 none;
   border: 0;
   border-radius: 1em;
   color: #eee;
@@ -112,11 +110,10 @@
   box-shadow: 0 2px 2px 1px rgba(0,0,0,0.5);
 }
 .dropbutton-toggle button {
-  background: #777 none;
   border-bottom-right-radius: 1em; /* LTR */
   border-top-right-radius: 1em; /* LTR */
   border-style: solid;
-  border-color: #333;
+  border-color: rgba(255,255,255,0.5);
   border-left-width: 1px; /* LTR */
   transition: background .5s ease;
 }
@@ -129,15 +126,9 @@
 }
 .dropbutton .dropbutton-action:hover,
 .dropbutton a:hover {
-  background: #666 none;
-  border-bottom-left-radius: 1em; /* LTR */
-  border-top-left-radius: 1em; /* LTR */
-}
-[dir="rtl"] .dropbutton .dropbutton-action:hover,
-[dir="rtl"] .dropbutton a:hover {
-  border-radius: 0;
-  border-bottom-right-radius: 1em;
-  border-top-right-radius: 1em;
+  background: transparent;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 .dropbutton a {
   padding: 0.1em 0.8em;
@@ -159,9 +150,6 @@ span.dropbutton-arrow {
 .js .dropbutton-toggle .dropbutton-arrow:hover {
   background: transparent;
 }
-td .dropbutton-multiple {
-  padding-right: 0;
-}
 [dir="rtl"]td .dropbutton-multiple {
   padding-left: 0;
 }
@@ -170,5 +158,29 @@ td .dropbutton-multiple .dropbutton {
   border-left: 0;
 }
 td .dropbutton .secondary-action {
-  border-top-color: #555;
+  border-top-color: rgba(255,255,255,0.5);
 }
+.js .dropbutton-widget {
+  background-color: #277abd;
+}
+.dropbutton-action > .js-form-submit.form-submit,
+.dropbutton-toggle button {
+  background: #277abd;
+  background-color: #277abd;
+  background-image: none;
+  text-shadow: none;
+  position: relative;
+}
+.dropbutton-action > .js-form-submit.form-submit:hover {
+  background-color: #2b8bd8;
+}
+@media screen and (max-width: 600px) {
+  .js .dropbutton-wrapper {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .js .dropbutton-widget .dropbutton-action input {
+    text-align: center;
+  }
+}
+

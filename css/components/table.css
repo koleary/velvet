@@ -55,9 +55,6 @@ td > .form-wrapper > .button {
 }
 
 /* Match the line height of the td so dropbutton aligns to select. */
-.js td .dropbutton-wrapper {
-  min-height: 20px;
-}
 .js td .dropbutton-multiple {
   padding-right: 2em;
 }
@@ -90,6 +87,10 @@ tr.odd,
 tr.even {
   background-image: none;
   background-color: transparent;
+}
+tr.selected td { 
+  background: #333;
+  color: #ffc;
 }
 td.checkbox,
 th.checkbox {

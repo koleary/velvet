@@ -18,7 +18,7 @@ a:focus,
   outline: 0;
 }
 hr {
-  background: #fff;
+  background: #777;
 }
 summary {
   text-transform: none;
@@ -30,7 +30,7 @@ h3,
 .heading-b,
 .heading-c {
   font-weight: 100;
-  color: #fff,
+  color: #ddd;
   line-height: 1.3em;
 }
 h4,

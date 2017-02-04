@@ -134,6 +134,12 @@ select:active {
 .form-item {
   margin: 0 0 10px;
 }
+/* Evenly space actions. */
+
+.form-wrapper,
+.form-actions {
+  margin: 0 -2px 10px;
+}
 
 /* Inline form items. */
 .form--inline.clearfix {
@@ -199,6 +205,13 @@ td .form-type-select > .form-select {
   }
   .details-wrapper > .form-item select {
     width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .form-actions input, 
+  .form-wrapper input[type="submit"] {
+    margin: 0 0 10px;
+    padding-bottom: 6px;
   }
 }
 @media all and (min-width: 600px) {
