@@ -8,7 +8,7 @@ table {
   border-collapse: collapse;
   min-width: 300px;
   width: calc(100% + 40px);
-  margin: 0 -20px; /* Push to viewport edge. */
+  margin: 0 -20px 10px; /* Push to viewport edge. */
 }
 tr,
 thead {
@@ -48,15 +48,6 @@ td > .dropbutton-wrapper,
 td .form-type-select > .form-select {
   margin: 0;
   vertical-align: middle;
-}
-td > .form-wrapper > .button {
-  font-size: 12px;
-  font-weight: normal;
-}
-
-/* Match the line height of the td so dropbutton aligns to select. */
-.js td .dropbutton-multiple {
-  padding-right: 2em;
 }
 td:first-child,
 th:first-child {
@@ -137,6 +128,7 @@ a:hover .tablesort--desc {
 @media all and (min-width: 0em) {
   td,
   td.block {
+    max-width: 100px;
     font-size: 95%;
     letter-spacing: -0.2px;
     overflow: hidden;
@@ -149,9 +141,13 @@ a:hover .tablesort--desc {
   }
 }
 @media all and (min-width: 600px) {
+  td,
   td.block {
     max-width: 100%;
     overflow: hidden;
+  }
+  td.block:last-child {
+    overflow: visible;
   }
 }
 

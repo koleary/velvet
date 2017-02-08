@@ -3,7 +3,8 @@
  * Visual styling for the details/summary element.
  */
 
-details {
+details,
+details.form-wrapper {
   width: calc(100% + 40px);
   margin: 0 -20px 2px; /* Push to viewport edge. */
   border: 0;

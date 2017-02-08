@@ -30,6 +30,8 @@ button.link:active {
   margin: 0 2px 0;
   padding: 6px 14px;
   border: 0;
+  border-radius: 20em;
+  line-height: 16px;
   color: #fff;
   text-shadow: none;
   transition: background .5s ease;
@@ -68,10 +70,8 @@ button.link:active {
 .button--danger {
   display: inline-block;
   margin: 0 2px 0;
-  border-radius: 20em;
-  -webkit-appearance: inherit;
-  -moz-appearance: inherit;
-  color: #ddd;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   font-weight: 600;
   text-decoration: none;
 }
@@ -96,6 +96,13 @@ button.link:active {
   color: #777;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
+}
+/* In tables */
+td > .form-wrapper > .button {
+  font-size: 12px;
+  line-height: 20px;
+  padding: 1px 6px;
+  font-weight: normal;
 }
 @media screen and (min-width: 0em) {
   .button,

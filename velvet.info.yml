@@ -17,6 +17,8 @@ libraries-override:
     css:
       component:
         css/components/dropbutton.component.css: false
+  seven/vertical-tabs:
+    - velvet/vertical-tabs
 libraries-extend:
   core/ckeditor:
     - velvet/ckeditor-dialog

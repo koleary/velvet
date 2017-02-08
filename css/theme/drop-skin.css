@@ -137,8 +137,14 @@ span.dropbutton-arrow {
 .js .dropbutton-toggle .dropbutton-arrow:hover {
   background: transparent;
 }
-[dir="rtl"] td .dropbutton-multiple {
-  padding-left: 0;
+
+/* Dropbuttons in tables. 
+.js td .dropbutton-multiple {
+  padding-right: 2em;
+}*/
+[dir="rtl"] .js td .dropbutton-multiple {
+  padding-left: 2em;
+  padding-right: 2em;
 }
 td .dropbutton-multiple .dropbutton {
   border-right: 0;
@@ -164,7 +170,6 @@ td .dropbutton .secondary-action {
 @media screen and (max-width: 600px) {
   .js .dropbutton-wrapper {
     width: 100%;
-    margin-bottom: 10px;
   }
   .js .dropbutton-widget .dropbutton-action input {
     text-align: center;

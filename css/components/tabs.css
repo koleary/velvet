@@ -48,6 +48,9 @@
 .tabs a:focus {
   text-decoration: none;
 }
+.tabs.primary {
+  margin: 0;
+}
 
 /* 
  * Restyle for Velvet. 

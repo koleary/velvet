@@ -48,6 +48,9 @@ tr.field-plugin-settings-editing td {
     margin: 0;
     padding: 0;
   }
+  .field-ui-overview td {
+    max-width: 100%;
+  }
 }
 @media all and (min-width: 600px) {
   #field-display-overview .field-plugin-settings-edit-form .form-submit {
