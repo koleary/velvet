@@ -33,14 +33,12 @@
 .system-modules td details summary span {
   color: #eee;
 }
-/* Override datails backgrounds. 
+/* Override datails backgrounds. */
 .system-modules details,
 .system-modules details summary,
 .system-modules .details-wrapper,
 .system-modules details[open],
-.system-modules details[closed],
-.system-modules details[open] > summary:hover 
-.system-modules details[closed] > summary:hover {
+.system-modules details[open] > summary:hover {
   background: transparent;
 }
 .system-modules [open] summary,
@@ -54,7 +52,8 @@
 .system-modules details summary:hover {
   background: #333;
   color: #fff;
-}*/
+}
+
 .system-modules td details {
   height: auto;
 }

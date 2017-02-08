@@ -29,25 +29,27 @@
 .js .dropbutton-widget {
   border: 0;
 }
+.dropbutton-multiple .dropbutton {
+  border: 0;
+}
+.js .dropbutton-multiple .dropbutton-widget {
+  padding-right: 2em;
+  border-radius: 20em;
+  overflow: hidden;
+}
 .dropbutton-multiple.open .dropbutton-widget {
   border-radius: 1em;
 }
 .js .dropbutton-widget .dropbutton-action a,
 .js .dropbutton-widget .dropbutton-action input,
 .js .dropbutton-widget .dropbutton-action button {
-  border-radius: 20em 0 0 20em; /* LTR */
+  border-radius: 0;
   padding: 6px 14px;
   display: block;
   width: 100%;
 }
 .dropbutton .secondary-action {
-  border-top: 1px solid rgba(255,255,255,0.5);
-}
-.js .dropbutton-action.last {
-  border-radius: 0 0 0 1em; /* LTR */
-}
-[dir="rtl"] .js .dropbutton-action.last {
-  border-radius: 0 0 1em 0;
+  border: 0;
 }
 
 /* Single button. */
@@ -83,18 +85,6 @@
   border-right: 1px solid rgba(255,255,255,0.5);
   border-left: 0;
 }
-.js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button {
-  border-radius: 0 20em 20em 0; /* LTR */
-}
-[dir="rtl"].js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button {
-  border-radius: 20em 0 0 20em;
-}
-.dropbutton-multiple.open .dropbutton-widget .dropbutton-toggle button {
-  border-radius: 0 1em 1em 0; /* LTR */
-}
-[dir="rtl"] .dropbutton-multiple.open .dropbutton-widget .dropbutton-toggle button {
-  border-radius: 1em 0 0 1em;
-}
 .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:hover,
 .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button:focus {
   background:transparent;
@@ -102,7 +92,6 @@
 }
 .dropbutton-widget {
   border: 0;
-  border-radius: 1em;
   color: #eee;
   transition: none;
 }
@@ -119,16 +108,14 @@
 }
 [dir="rtl"] .dropbutton-toggle button {
   border-radius: 0;
-  border-bottom-left-radius: 1em;
-  border-top-left-radius: 1em;
+  /*border-bottom-left-radius: 1em;
+  border-top-left-radius: 1em;*/
   border-width: 0;
   border-right-width: 1px;
 }
 .dropbutton .dropbutton-action:hover,
 .dropbutton a:hover {
   background: transparent;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
 }
 .dropbutton a {
   padding: 0.1em 0.8em;
@@ -150,7 +137,7 @@ span.dropbutton-arrow {
 .js .dropbutton-toggle .dropbutton-arrow:hover {
   background: transparent;
 }
-[dir="rtl"]td .dropbutton-multiple {
+[dir="rtl"] td .dropbutton-multiple {
   padding-left: 0;
 }
 td .dropbutton-multiple .dropbutton {
@@ -158,7 +145,7 @@ td .dropbutton-multiple .dropbutton {
   border-left: 0;
 }
 td .dropbutton .secondary-action {
-  border-top-color: rgba(255,255,255,0.5);
+  border-top: 0;
 }
 .js .dropbutton-widget {
   background-color: #277abd;

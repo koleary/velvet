@@ -34,6 +34,11 @@ button.link:active {
   text-shadow: none;
   transition: background .5s ease;
 }
+/* Overrides pseudoclass-specific padding from classy. */
+.button:first-child,
+.button:last-child  {
+  margin: 0 2px 0;
+}
 .button:hover,
 .button:focus,
 .button:active {
@@ -48,7 +53,7 @@ button.link:active {
 .button-action,
 .button--primary {
   margin: 0 2px 0;
-  background: #277abd;
+  background-color: #277abd;
   outline: none;
   transition: background 0.5s ease;
 }
@@ -92,7 +97,6 @@ button.link:active {
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
 }
-
 @media screen and (min-width: 0em) {
   .button,
   .button--danger {
@@ -105,11 +109,13 @@ button.link:active {
 }
 @media screen and (min-width: 600px) {
   .button  {
-    float: left; /* LTR */
     width: auto;
     min-width: 100px;
   }
-  [dir="rtl"] .button  {
+  .form-actions .button  {
+    float: left; /* LTR */
+  }
+  [dir="rtl"] .form-actions .button  {
     float: right;
   }
   /* spacing between inline buttons. */

@@ -178,6 +178,10 @@ fieldset:not(.fieldgroup) {
 td .form-type-select > .form-select {
   line-height: 10px;
 }
+td .form-wrapper, 
+td .form-actions {
+  margin: 0;
+}
 .details-wrapper > .form-item {
   margin-right: 0;
   margin-left: 0;
