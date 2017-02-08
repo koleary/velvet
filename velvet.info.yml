@@ -9,17 +9,17 @@ core: 8.x
 libraries:
  - velvet/global-styling
 libraries-override:
-  core/drupal.vertical-tabs:
-    css:
-      component:
-        misc/vertical-tabs.css: false
   seven/global-styling:
     css:
       component:
         css/components/dropbutton.component.css: false
   seven/vertical-tabs:
-    - velvet/vertical-tabs
+    css:
+      component:
+        css/components/vertical-tabs.css: false
 libraries-extend:
+  seven/vertical-tabs:
+    - velvet/vertical-tabs
   core/ckeditor:
     - velvet/ckeditor-dialog
   tour/tour-styling:
