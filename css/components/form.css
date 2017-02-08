@@ -222,6 +222,20 @@ td .form-actions {
     margin: 0 0 10px;
     padding-bottom: 6px;
   }
+  /* Overriding larger text from Seven because narrow iFrame ≠ mobile. */
+  input.form-autocomplete, 
+  input.form-text, 
+  input.form-tel, 
+  input.form-email, 
+  input.form-url, 
+  input.form-search, 
+  input.form-number, 
+  input.form-color, 
+  input.form-file, 
+  textarea.form-textarea {
+    font-size: 1em;
+    line-height: 1em;
+  }
 }
 @media all and (min-width: 600px) {
   .form--inline > .form-item,
@@ -238,6 +252,9 @@ td .form-actions {
 }
 
 .form-composite > .fieldset-wrapper > .description, .form-item .description {
-  font-size: inherit;
+  font-size: 12px;
 }
+
+@media screen and (max-width: 600px) {
+
 

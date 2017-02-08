@@ -3,17 +3,22 @@
  * Override vertical tabs for settings tray.
  */
 
-.form-type-vertical-tabs label {
-  margin-bottom: 10px;
-}
-.vertical-tabs {
+.js-form-item.js-form-type-vertical-tabs {
   margin: 0 -20px;
-  border: 0;
+  padding: 0;
   background: #333;
 }
+.form-type-vertical-tabs label {
+  margin: 0 20px;
+  padding: 10px 0;
+}
+.vertical-tabs {
+  border: 0;
+}
 .vertical-tabs__menu {
+  box-sizing: border-box;
   float: left; /* LTR */
-  width: 140px; /* fixed width so tabs dont 'bounce' if scroll is triggered */
+  width: 35%;
   margin: 0;
   padding: 0;
   border: 0;
@@ -21,28 +26,28 @@
 }
 [dir="rtl"] .vertical-tabs__menu {
   float: right;
-  margin: 0;
 }
-.vertical-tabs__pane {
-  float: right; /* LTR */
-  width: calc(100% - 140px); /* 140 is the width of tabs menu */
-  margin: 0;
-  border: 0;
-}
-[dir="rtl"] .vertical-tabs__pane {
-  float: left;
-  margin: 0;
-  padding: 20px;
-}
-.vertical-tabs .details-wrapper {
+.vertical-tabs__panes {
   box-sizing: border-box;
+  float: left; /* LTR */
+  width: 65%;
   margin: 0;
-  padding: 0;
 }
-.vertical-tabs details {
-  box-sizing: border-box;
+[dir="rtl"] .vertical-tabs__panes {
+  float: right;
+}
+details[open].vertical-tabs__panes {
   margin: 0;
-  padding: 10px;
+}
+[dir="rtl"] .vertical-tabs__panes {
+  margin: 0;
+}
+.vertical-tabs__pane > .details-wrapper {
+  background: #333;
+}
+.vertical-tabs-panes details,
+.vertical-tabs-panes details.form-wrapper {
+  margin: 0;
 }
 .vertical-tabs fieldset.fieldgroup {
   margin: 0;
@@ -52,6 +57,8 @@
   display: none;
 }
 details[open].vertical-tabs__pane {
+  margin: 0;
+  width: 100%;
   background: transparent;
 }
 .vertical-tabs_pane fieldset {
@@ -111,7 +118,14 @@ strong.vertical-tabs__menu-item-title {
   color: #bbb;
   line-height: inherit;
 }
-[data-vertical-tabs-panes] {
-  background: #444;
-  background-color: #444;
+
+@media screen and (max-width: 600px) {
+  .js-form-item.js-form-type-vertical-tabs {
+    margin: 0;
+    background: #444;
+  }
+  .form-type-vertical-tabs label {
+    margin: 0px;
+  }
 }
+

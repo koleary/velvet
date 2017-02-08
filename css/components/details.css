@@ -57,4 +57,7 @@ summary,
   background: #222;
   border: 0;
 }
+details.form-wrapper:last-of-type {
+  margin-bottom: 10px;
+}
 
