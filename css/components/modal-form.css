@@ -21,11 +21,10 @@ tr.field-plugin-settings-editing td {
   border: 0;
   white-space: normal;
 }
-#field-display-overview .field-plugin-settings-edit-form .form-item,
-#field-display-overview .field-plugin-settings-edit-form .form-submit {
-  display: block;
-  margin: 0 0 10px;
-}
+#field-display-overview tr.drag,
+#field-display-overview tr.field-plugin-settings-changed {
+  background: #111;
+} 
 @media all and (min-width: 0em) {
   #field-display-overview .field-plugin-settings-edit-form .form-item,
   #field-display-overview .field-plugin-settings-edit-form .form-submit {
@@ -55,6 +54,7 @@ tr.field-plugin-settings-editing td {
 @media all and (min-width: 600px) {
   #field-display-overview .field-plugin-settings-edit-form .form-submit {
     display: inline-block;
+    margin: 0 2px 10px;
   }
  .field-ui-overview .field-plugin-settings-edit-wrapper {
     position: static;

@@ -4,15 +4,15 @@
  */
 
 .system-modules table {
-  margin-bottom: 0;
+  margin: 0;
+  width: 100%;
 }
 .system-modules tr.even,
 .system-modules tr.odd,
 .locale-translation-status-form tr.even,
 .locale-translation-status-form tr.odd {
-  background-color: #444;
+  background-color: #333;
   border-bottom: 1px solid #777;
-  color: #eee;
 }
 .system-modules tr.even:hover,
 .system-modules tr.odd:hover,
@@ -41,30 +41,37 @@
 .system-modules details[open] > summary:hover {
   background: transparent;
 }
-.system-modules [open] summary,
-.system-modules [closed] summary {
+details.package-listing[open] > summary,
+details.package-listing[closed] > summary {
   border: 0;
-  margin: 0 -20px;
+  margin: 0;
   padding: 0 20px;
 }
-.system-modules details,
-.system-modules details summary,
-.system-modules details summary:hover {
+.system-modules details {
   background: #333;
   color: #fff;
 }
-
-.system-modules td details {
-  height: auto;
+details.package-listing > summary {
+  background: #222;
+  border-bottom: 1px solid #555;
+}
+details.package-listing > summary:hover,
+details.package-listing[open] > summary:hover  {
+  background: #111;
+}
+.package-listing > .details-wrapper > table td summary {
+  line-height: 16px;
+}
+.package-listing > .details-wrapper > table td details[open] summary,
+.package-listing > .details-wrapper > table td .details-description,
+.package-listing details.form-wrapper:last-of-type {
+  margin-bottom: 0;
 }
 .system-modules details[open] {
   padding-bottom: 0;
 }
 .system-modules .details-wrapper {
   padding: 0;
-}
-.system-modules td.module {
-  width: auto;
 }
 .system-modules summary {
   border-bottom-color: transparent;

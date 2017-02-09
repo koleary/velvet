@@ -11,12 +11,12 @@ details.form-wrapper {
   line-height: normal;
 }
 details[open] {
-  background-color: #222;
-  padding-bottom: 10px;
+  background-color: #333;
 }
 details[open] > summary {
+  margin-bottom: 10px;
   background-color: #222;
-  color: #eee;
+  color: #ddd;
 }
 details[open] > summary:hover {
   background-color: #111;
@@ -54,8 +54,11 @@ details,
 summary,
 .filter-wrapper,
 .details-wrapper {
-  background: #222;
+  background: #333;
   border: 0;
+}
+details > .details-wrapper {
+  padding: 0 20px 10px;
 }
 details.form-wrapper:last-of-type {
   margin-bottom: 10px;

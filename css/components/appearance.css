@@ -2,6 +2,13 @@
  * @file
  * Appearance page settings.
  */
+
 .color-form .form-item {
   background: transparent;
+  height: 3em;
+}
+.theme-selector .screenshot, 
+.theme-selector .no-screenshot {
+  border: 1px solid #555;
+  padding: 0;
 }

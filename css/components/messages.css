@@ -1,9 +1,8 @@
 /**
  * @file
- * Visual styling for messages in the Outside-In modules off canvas tray.
+ * Visual styling for messages.
  */
-
-/* Style messages for offcanvas tray. */
+ 
 .messages {
   box-shadow: none;
   background-repeat: no-repeat;

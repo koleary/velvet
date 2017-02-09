@@ -16,6 +16,9 @@ label,
 .form-composite > legend, {
   display: block;
 }
+td label {
+  line-height: 20px;
+}
 .fieldgroup:not(.form-composite) > legend {
   text-transform: none;
 }
@@ -24,12 +27,25 @@ div.description,
 .form-item .description,
 .details-description,
 .details-wrapper > .description {
-  max-width: 400px;
+  /* More than this strains scannability (finding the next line). */
+  max-width: 600px;
   margin: 0 0 10px;
-  font-size: 12px;
   font-style: italic;
   color: #aaa;
   transition: color .5s ease;
+}
+ul.tips,
+div.description {
+  font-size: 12px;
+  line-height: 16px;
+}
+.form-item .description,
+.details-description,
+.details-wrapper > .description,
+.form-composite > .fieldset-wrapper > .description {
+  padding-top: 2px;
+  font-size: 11px;
+  line-height: 14px;
 }
 
 /* Override added colon from classy. */
@@ -134,19 +150,22 @@ select:active {
 .form-item {
   margin: 0 0 10px;
 }
-/* Evenly space actions. */
 
-.form-wrapper,
+/* Evenly space actions. */
 .form-actions {
-  margin: 10px -2px 10px;
+  /* Negative H margin cancels out margin on first and last children. 
+   * This removes the need for any RTL styles. */
+  margin: 0 -2px 10px;
 }
 
 /* Inline form items. */
 .container-inline div, 
 .container-inline label {
-    display: inline-block;
+  display: inline-block;
 }
 .form--inline.clearfix {
+  /* Negative H margin cancels out margin on first and last children. 
+   * This removes the need for any RTL styles. */
   margin: 0 -2px 10px;
   padding: 0;
 }
@@ -160,9 +179,9 @@ select:active {
   padding: 0;
   vertical-align: bottom;
 }
-/* Adds margin top needed when button wraps. */
 .form--inline .form-actions {
-  margin: 18px 2px 0;
+  /* Needed when button wraps. */
+  margin-top: 18px;
 }
 
 /* Fieldsets. */
@@ -172,8 +191,9 @@ fieldset:not(.fieldgroup) {
   min-width: 0;
   position: relative;
   margin: 10px -20px;
+  /* Top padding is for label. */
   padding: 30px 20px 20px;
-  border: 1px solid #777;
+  border: 1px solid #555;
   border-radius: 2px;
   color: #ddd;
 }
@@ -182,8 +202,8 @@ fieldset:not(.fieldgroup) {
 td .form-type-select > .form-select {
   line-height: 10px;
 }
-td .form-wrapper, 
-td .form-actions {
+td > .form-wrapper, 
+td > .form-actions {
   margin: 0 5px;
 }
 .details-wrapper > .form-item {
@@ -198,6 +218,9 @@ td .form-actions {
   .form--inline > .form-item,
   .form--inline .form-actions {
     width: 100%;
+  }
+  td .form-item {
+    margin: 0;
   }
   td .form-type-select > .form-select {
     /* Must use fixed height so padding does not hide descenders. */
@@ -250,11 +273,4 @@ td .form-actions {
     margin: 0 2px 0;
   }
 }
-
-.form-composite > .fieldset-wrapper > .description, .form-item .description {
-  font-size: 12px;
-}
-
-@media screen and (max-width: 600px) {
-
 

@@ -78,7 +78,7 @@ button.link:active {
 .button--danger:hover, 
 .button--danger:focus, 
 .button--danger:active {
-  background: #c72100;
+  background: #b3341b;
   padding: 6px 14px;
   border-radius: 20em;
   color: #fff;
@@ -112,6 +112,12 @@ td > .form-wrapper > .button {
   }
   .form-actions .button {
     margin: 0;
+  }
+}
+/* Overrides Seven. */
+@media screen and (max-width: 600px) {
+  #edit-cancel {
+    margin: 0 0 10px;
   }
 }
 @media screen and (min-width: 600px) {

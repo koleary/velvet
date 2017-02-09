@@ -4,6 +4,7 @@ global-styling:
     theme:
       css/base/elements.css: {}
       css/components/form.css: {}
+      css/components/colors.css: {}
       css/components/messages.css: {}
       css/components/table.css: {}
       css/components/tabledrag.css: {}

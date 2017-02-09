@@ -1,6 +1,6 @@
 /**
  * @file
- * Visual styling for tables in the Offcanvas tray.
+ * Visual styling for tables.
  */
 
 table {
@@ -71,7 +71,9 @@ tbody tr.color-error:focus {
   background: #333;
 }
 tr:hover,
-tr:hover td {
+tr:hover td,
+tbody tr:hover,
+tbody tr:focus {
   background-color: #333;
 }
 tr.odd,
@@ -133,7 +135,7 @@ a:hover .tablesort--desc {
     letter-spacing: -0.2px;
     overflow: hidden;
   }
-  /* This prevents the dropbutton from being hidden. 
+  /* This prevents the dropbutton dropdowns from being hidden. 
   /* @todo Figure out a way that doesn't assume actions are always the last cell. */
   td:last-child,
   td.block:last-child {

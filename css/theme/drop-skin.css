@@ -54,14 +54,14 @@
 
 /* Single button. */
 .dropbutton-single .dropbutton-widget {
-  border: 0;
   position: static;
   display: inline-block;
+  border: 0;
+  border-radius: 1em;
 }
 .dropbutton-single .dropbutton-action a {
   padding: 4px 1em;
   border: 0;
-  border-radius: 0;
   text-decoration: none;
   transition: background 0.5s;
   width: auto!important;
@@ -138,13 +138,8 @@ span.dropbutton-arrow {
   background: transparent;
 }
 
-/* Dropbuttons in tables. 
-.js td .dropbutton-multiple {
-  padding-right: 2em;
-}*/
-[dir="rtl"] .js td .dropbutton-multiple {
-  padding-left: 2em;
-  padding-right: 2em;
+.js td .dropbutton-widget {
+  border-radius: 1em;
 }
 td .dropbutton-multiple .dropbutton {
   border-right: 0;
@@ -167,12 +162,24 @@ td .dropbutton .secondary-action {
 .dropbutton-action > .js-form-submit.form-submit:hover {
   background-color: #2b8bd8;
 }
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 0em) {
   .js .dropbutton-wrapper {
     width: 100%;
+    margin-bottom: 10px;
+  }
+  .js td .dropbutton-wrapper {
+    margin-bottom: 0;
   }
   .js .dropbutton-widget .dropbutton-action input {
     text-align: center;
+  }
+}
+@media screen and (min-width: 600px) {
+  .js .dropbutton-wrapper {
+    width: auto;
+  }
+  .js .dropbutton-widget .dropbutton-action input {
+    text-align: left;
   }
 }
 

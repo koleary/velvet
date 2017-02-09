@@ -1,4 +1,5 @@
 /**
+ * @file
  * Views styling
  */
 
@@ -217,6 +218,10 @@ div.views-preview-wrapper {
 .details-wrapper .dropbutton-wrapper {
   right: 20px; /* LTR */
 }
+[dir="rtl"] .details-wrapper .dropbutton-wrapper {
+  left: 20px;
+  right: auto;
+}
 .views-filterable-options-controls .form-item {
   margin: 0 0 10px;
 }
@@ -224,6 +229,10 @@ div.views-preview-wrapper {
   margin: 0;
   width: 100%;
   overflow: hidden;
+}
+.preview-submit-wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* Override columns. */

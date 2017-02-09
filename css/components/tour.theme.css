@@ -26,3 +26,13 @@
   margin: 0;
   background: #277abd;
 }
+@media screen and (min-width: 0em) {
+  .joyride-tip-guide .joyride-next-tip {
+    width: auto;
+  }
+}
+@media screen and (min-width: 600px) {
+  .joyride-tip-guide .joyride-next-tip {
+    width: auto;
+  }
+}

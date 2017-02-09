@@ -1,6 +1,6 @@
 /*
  * @file
- * Override vertical tabs for settings tray.
+ * Override vertical tabs from Seven.
  */
 
 .js-form-item.js-form-type-vertical-tabs {
@@ -76,7 +76,7 @@ details[open].vertical-tabs__pane {
   transition: background 0.5s;
 }
 .vertical-tabs__menu-item:hover {
-  background: #222;
+  background: #111;
 }
 [dir="rtl"] .vertical-tabs__menu-item {
   padding: 10px 20px 10px 5px; /* LTR */
@@ -103,6 +103,9 @@ strong.vertical-tabs__menu-item-title {
 }
 .vertical-tabs__menu-item.is-selected {
   border: 0;
+  background-color: #222;
+}
+.vertical-tabs__menu-item.is-selected:hover {
   background-color: #111;
 }
 [dir="rtl"] .vertical-tabs__menu-item.is-selected {
@@ -118,14 +121,25 @@ strong.vertical-tabs__menu-item-title {
   color: #bbb;
   line-height: inherit;
 }
-
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 0em) {
   .js-form-item.js-form-type-vertical-tabs {
     margin: 0;
     background: #444;
   }
   .form-type-vertical-tabs label {
     margin: 0px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .js-form-item.js-form-type-vertical-tabs {
+    margin: 0 -20px;
+  }
+  .form-type-vertical-tabs label {
+    margin: 0 20px;
+  }
+  .vertical-tabs__pane > .details-wrapper {
+    padding: 10px 20px 10px;
+    background: #222;
   }
 }
 

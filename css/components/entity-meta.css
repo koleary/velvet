@@ -3,9 +3,8 @@
  * Entity meta settings.
  */
 
-.entity-meta {
-  margin-left: -20px;
-  margin-right: -20px;
+.entity-meta__header {
+  padding: 0 0 10px;
 }
 .entity-meta,
 .entity-meta__header,
@@ -18,6 +17,9 @@
   box-shadow: none;
   color: #ddd;
 }
+.entity-meta__header .form-item {
+  margin: 0 0 10px;
+}
 .entity-meta__title {
   text-shadow: none;
 }
@@ -27,6 +29,7 @@
 .entity-meta details:first-child {
   border-top-color: transparent;
 }
+
 .entity-meta details[open],
 .entity-meta details[open] + details[open] {
   background-color: #333;
@@ -36,9 +39,11 @@
 }
 .entity-meta details > summary {
   text-shadow: none;
-  margin: 0;
   padding: 0 20px;
 }
 .entity-meta details .summary {
  display: none; /* Hide JS summaries. @todo Rethink summaries. */
+}
+.entity-meta details[open] {
+  margin: 0 -20px 2px;
 }

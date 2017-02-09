@@ -1,4 +1,7 @@
-/* Progress bar */
+/**
+ * @file
+ * Visual styling for the progress bar .
+ */
 
 .progress__bar {
   background-color: #3ca8ff;

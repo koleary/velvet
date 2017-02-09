@@ -10,3 +10,10 @@
 .breadcrumb {
   line-height: 1.3em
 }
+.system-status-report__status-title:first-child {
+  padding-left: 40px; /* LTR */
+}
+[dir="rtl"] .system-status-report__status-title:first-child {
+  padding-left: 6px;
+  padding-right: 40px;
+}
