@@ -1,0 +1,27 @@
+/**
+ * @file
+ * Styles for Pagination.
+ */
+
+.pager__item,
+.pager__item a {
+  color: #ddd;
+  font-size: normal;
+  border-bottom-width: 1px;
+}
+.pager__item.is-active a {
+  border-bottom-width: 1px;
+  border-bottom-color: #85bef4;
+  color: #85bef4;
+}
+.pager__item a:hover,
+.pager__item a:focus {
+  border-bottom-color: #85bef4;
+  color: #85bef4;
+}
+.pager__item--next a,
+.pager__item--last a,
+.pager__item--first a,
+.pager__item--previous a {
+  color: #ddd;
+}

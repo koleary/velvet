@@ -32,8 +32,6 @@ tr > td {
   font-size: 12px;
   line-height: 20px;
   text-align: left; /* LTR */
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 [dir="rtl"] tr > th,
 [dir="rtl"] tr > td {
@@ -128,6 +126,11 @@ a:hover .tablesort--desc {
 
 /* Squeeze as much into the narrow space as possible. */
 @media all and (min-width: 0em) {
+  tr > th,
+  tr > td {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
   td,
   td.block {
     max-width: 100px;
@@ -143,6 +146,16 @@ a:hover .tablesort--desc {
   }
 }
 @media all and (min-width: 600px) {
+  /* Trick that columns to be even. */
+  tr > th,
+  tr > td {
+    white-space: normal;
+  }
+  tr td {
+    width: 1000px;
+    max-width: 100%;
+    min-width: 100px;
+  }
   td,
   td.block {
     max-width: 100%;

@@ -7,6 +7,7 @@ global-styling:
       css/components/colors.css: {}
       css/components/messages.css: {}
       css/components/table.css: {}
+      css/components/pager.css: {}
       css/components/tabledrag.css: {}
       css/components/tabs.css: {}
       css/components/details.css: {}
