@@ -67,7 +67,8 @@ button.link:active {
 .button--primary:active {
   background: #2b8bd8;
 }
-.button--danger {
+.button--danger,
+#edit-cancel {
   display: inline-block;
   margin: 0 2px 0;
   -webkit-appearance: none;
