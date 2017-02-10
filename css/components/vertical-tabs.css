@@ -126,6 +126,7 @@ strong.vertical-tabs__menu-item-title {
   }
   .vertical-tabs__menu {
     display: inline-block;
+    vertical-align: top;
     width: 35%;
     margin: 0;
     padding-right: 10px;
@@ -133,6 +134,7 @@ strong.vertical-tabs__menu-item-title {
   }
   .vertical-tabs__panes {
     display: inline-block;
+    vertical-align: top;
     width: 60%;
     margin: 0;
   }

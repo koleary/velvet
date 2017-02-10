@@ -17,10 +17,6 @@
 .locale-translation-status-form tr.odd:hover {
   background: transparent; !important;
 }
-.system-modules label:hover,
-.system-modules-uninstall label:hover {
-  color: #2196f3;
-}
 .system-modules label,
 .system-modules-uninstall label {
   color: #333;
@@ -29,12 +25,12 @@
   background-color: transparent;
 }
 .system-modules td details a,
-.system-modules td details summary {
+.system-modules td details summary,
+.system-modules td details summary span:hover,
+.system-modules label:hover,
+.system-modules-uninstall label:hover {
   color: #2196f3;
 }
 .system-modules td details summary span {
   color: #eee;
-}
-.system-modules td details summary span:hover {
-  color: #2196f3;
 }

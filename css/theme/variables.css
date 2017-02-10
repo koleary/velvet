@@ -1,0 +1,80 @@
+/* Re-color by changing these values. */
+
+/* Headings and text. */
+
+/* Page titles. */
+h1.page-title {
+  .color: #fff;
+}
+/* All headings. */
+h1,h2,h3,h4,h5,h6 {
+  .color: #eee;
+}
+
+/* Borders. */
+
+/* Separation lines */
+.admin-list li,.theme-selector .screenshot,.theme-selector .no-screenshot{.  
+  border-color: #555;
+}
+
+/* Buttons and links */
+
+/* link text */
+a,.link,button.link,.system-modules td details a,.system-modules td details summary,.system-modules td details a,.system-modules td details summary,.system-modules td details summary span:hover,.system-modules label:hover,.system-modules-uninstall label:hover {
+  color: #85bef4;
+}
+/* Link hovers */
+button a:focus,button a:hover,button a:active,button.link:focus,button.link:hover,button.link:active {
+  color: #85bef4;
+}
+/* General buttons. */
+.button,.button--danger,.progress__track,.views-displays ul.secondary li.is-active a.is-active,.cke_reset_all a.cke_dialog_ui_button,.cke_reset_all .cke_dialog_footer_buttons a.cke_dialog_ui_button_ok {
+  background: #277abd;
+}
+.cke_reset_all .cke_dialog_footer_buttons a.cke_dialog_ui_button:hover,.cke_reset_all .cke_dialog_footer_buttons a.cke_dialog_ui_button:focus,.cke_reset_all .cke_dialog_footer_buttons a.cke_dialog_ui_button:active,.cke_reset_all .cke_dialog_footer_buttons a.cke_dialog_ui_button_ok:hover,.cke_reset_all .cke_dialog_footer_buttons a.cke_dialog_ui_button_ok:focus {
+  background-color: #666;
+}
+/* Primary buttons. */
+.button-action,.button--primary,.joyride-tip-guide .joyride-next-tip {
+  background-color: #277abd;
+}
+/* Primary buttons hover, focus, active. */
+.button-action:hover,.button-action:focus,.button-action:active,.button--primary:hover,.button--primary:focus,.button--primary:active {
+  background: #2b8bd8;
+}
+/* Disabled buttons */
+.button--danger:disabled,.button--danger.is-disabled,tr.drag  {
+  background: #555;
+}
+/* Danger effects. */
+.button--danger:hover,.button--danger:focus,.button--danger:active {
+  background: #b3341b;
+}
+
+/* Backgrounds. */
+
+/* Header and footer backgrounds */
+.content-header,.ui-dialog div.ui-dialog-titlebar,.ui-dialog div.ui-widget-header,.ui-dialog div.ui-widget-content.ui-dialog-buttonpane,.cke_reset_all .cke_dialog_title {
+  background-color: #222;
+}
+/* Content background. */
+body, .ui-dialog div.ui-widget-content.ui-dialog-content, .entity-meta,.entity-meta__header,.entity-meta details, .field-ui-overview .field-plugin-settings-edit-wrapper,.tabs.primary .tabs__tab.is-active a  {
+  background: #444;
+}
+/* Containers and collapsible containers when open. *
+details,summary,details[open],.filter-wrapper,.details-wrapper,.entity-meta details[open],.entity-meta details[open] + details[open],.fieldset,fieldset:not(.fieldgroup),#field-display-overview tr.field-plugin-settings-editing,.system-modules tr.even,.system-modules tr.odd,.locale-translation-status-form tr.even,.locale-translation-status-form tr.odd,.system-modules details,.panel,tbody tr.color-warning:hover,tbody tr.color-warning:focus,tbody tr.color-error:hover,tbody tr.color-error:focus,tr:hover,tr:hover td,tbody tr:hover,tbody tr:focus,tr.selected td,.tabs.primary a:focus,.tabs.secondary .tabs__tab.is-active,.js-form-item.js-form-type-vertical-tabs,.vertical-tabs__pane > .details-wrapper,.views-display-top,.views-displays .tabs .action-list li,div.views-ui-dialog .views-offset-top,.view-preview-form__title {
+  background-color: #333;
+}
+/* Hover effects ? */
+details[open] > summary,details.package-listing > summary,summary:hover,.ui-dialog .ajax-progress-throbber,.vertical-tabs__menu-item.is-selected {
+  background-color: #222;
+}
+/* Things that need some attention. */
+details[open] > summary:hover, details.package-listing > summary:hover,details.package-listing[open] > summary:hover,#field-display-overview tr.drag,.views-ui-rearrange-filter-form tr.drag td,#field-display-overview tr.field-plugin-settings-changed,.vertical-tabs__menu-item.is-selected:hover,.views-displays .tabs.secondary li a,.views-displays ul.secondary li a,.views-displays ul.secondary li.is-active a,.views-displays ul.secondary li.is-active a.is-active{
+  background-color: #111;
+}
+/* Things that really need to stand out. */
+.messages--status,.messages--warning,.messages--error,tr.drag-previous,.tabs__tab:hover,.tabs__tab:focus,.views-ui-rearrange-filter-form tr.drag-previous td {
+  background-color: #000;
+}

@@ -4,11 +4,19 @@
  */
 
 .color-form .form-item {
+  /* Theres a hacky spacing div in Seven that makes this necessary. 
+   * @todo Make this markup better in Seven. */
   background: transparent;
   height: 3em;
 }
 .theme-selector .screenshot, 
 .theme-selector .no-screenshot {
-  border: 1px solid #555;
+  border: 1px solid #777;
+  padding: 0;
+}
+.system-themes-list-uninstalled {
+  border-top: 1px solid #555;
+}
+.theme-selector {
   padding: 0;
 }

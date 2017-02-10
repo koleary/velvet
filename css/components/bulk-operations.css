@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Styles for bulk operations.
+ */
+
+@media all and (min-width: 600px) {
+  #edit-node-bulk-form--2 > div {
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    vertical-align: bottom;
+  }
+  #edit-node-bulk-form--2 > div > .button{
+    margin: 0 2px;
+  }
+}

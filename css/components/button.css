@@ -39,7 +39,8 @@ button.link:active {
 /* Overrides pseudoclass-specific padding from classy. */
 .button:first-child,
 .button:last-child  {
-  margin: 0 2px 0;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 .button:hover,
 .button:focus,
@@ -132,6 +133,9 @@ td > .form-wrapper > .button {
   .form-actions .button  {
     float: left; /* LTR */
     margin: 0 2px 10px;
+  }
+  .form--inline .form-actions .button  {
+    margin-bottom: 0;
   }
   [dir="rtl"] .form-actions .button  {
     float: right;

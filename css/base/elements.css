@@ -3,7 +3,7 @@
  */
 body {
   background: #444;
-  color: #ddd;
+  color: #fff;
 }
 a,
 .link {
@@ -18,7 +18,8 @@ a:focus,
   outline: 0;
 }
 hr {
-  background: #777;
+  background: #555;
+  
 }
 summary {
   text-transform: none;
@@ -32,6 +33,7 @@ h3,
   font-weight: 100;
   color: #ddd;
   line-height: 1.3em;
+  max-width: 800px;
 }
 h4,
 h5,
@@ -41,6 +43,7 @@ h6,
 .heading-f {
   font-weight: bold;
   color: #eee,
+  max-width: 600px;
 }
 p,
 dl,
@@ -64,6 +67,10 @@ ul,
 ol,
 li {
   color: #ddd;
+}
+ul {
+  margin: 0;
+  padding: 0 16px 0;
 }
 code,
 pre {

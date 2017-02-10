@@ -10,6 +10,7 @@ global-styling:
       css/components/pager.css: {}
       css/components/tabledrag.css: {}
       css/components/tabs.css: {}
+      css/components/bulk-operations.css: {}
       css/components/details.css: {}
       css/components/modal-form.css: {}
       css/components/panel.css: {}

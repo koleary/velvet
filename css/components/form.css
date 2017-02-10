@@ -74,11 +74,11 @@ input.form-date,
 input.form-time {
   display: inline-block;
   box-sizing: border-box;
+  margin: 0;
+  padding: 6px 10px;
   max-width: 100%;
   background-color: #eee;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .2);
-  margin: 0;
-  padding: 6px 10px;
   border: 1px solid #333;
   border-radius: 2px;
   outline: 0;
@@ -112,7 +112,6 @@ input[type="checkbox"] {
   margin: 0;
 }
 td .checkbox {
-  display: table-cell;
   line-height: normal;
   vertical-align: middle;
 }
@@ -126,7 +125,7 @@ select {
   box-sizing: border-box;
   padding: 6px 20px 6px 6px; /* LTR */
   border: 1px solid #777;
-  background: url(/core/misc/icons/333333/caret-down.svg) no-repeat 98% 63% #7b7b7b;
+  background: url(/core/misc/icons/333333/caret-down.svg) no-repeat 98% 63% #777;
   box-shadow: inset 0 1px 0px 0px rgba(255, 255, 255, .3);
   vertical-align: bottom;
   font-size: 14px;
@@ -149,6 +148,7 @@ select:active {
 /* Reset vertical rhythm to push downward. */
 .form-item {
   margin: 0 0 10px;
+  max-width: 800px;
 }
 
 /* Evenly space actions. */

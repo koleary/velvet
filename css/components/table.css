@@ -28,7 +28,7 @@ tr > td {
   background-color: transparent;
   vertical-align: middle;
   border: 0;
-  border-bottom: 1px solid #777;
+  border-bottom: 1px solid #555;
   font-size: 12px;
   line-height: 20px;
   text-align: left; /* LTR */
@@ -123,10 +123,15 @@ a .tablesort--desc,
 a:hover .tablesort--desc {
   background-image: url(/core/misc/icons/008ee6/twistie-up.svg);
 }
+table.sticky-header {
+  background-color: #111;
+  margin: 0;
+  border-top: 1px solid #555;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.5);
+}
 
 /* Squeeze as much into the narrow space as possible. */
 @media all and (min-width: 0em) {
-  tr > th,
   tr > td {
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -144,14 +149,20 @@ a:hover .tablesort--desc {
   td.block:last-child {
     overflow: visible;
   }
+  .tableresponsive-toggle-columns {
+    text-align: right; /* LTR */
+  }
+  [dir="rtl"] .tableresponsive-toggle-columns {
+    text-align: left;
+  }
 }
 @media all and (min-width: 600px) {
   /* Trick that columns to be even. */
-  tr > th,
   tr > td {
     white-space: normal;
   }
-  tr td {
+  tr td,
+  tr th {
     width: 1000px;
     max-width: 100%;
     min-width: 100px;
