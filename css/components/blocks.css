@@ -1,0 +1,20 @@
+/**
+ * @file
+ * Visual styling for forms.
+ */
+
+tr.region-title {
+  font-weight: bold;
+  border-top: 2px solid #777;
+}
+tr.region-title > td {
+  color: #fff;
+}
+.region-title__action > .button {
+  color: #85bef4;
+  background: transparent;
+  font-weight: bold;
+}
+.region-title__action > .button:hover {
+  text-decoration: underline;
+}

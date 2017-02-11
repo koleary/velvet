@@ -123,6 +123,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   box-sizing: border-box;
+  max-width: 200px;
   padding: 6px 20px 6px 6px; /* LTR */
   border: 1px solid #777;
   background: url(/core/misc/icons/333333/caret-down.svg) no-repeat 98% 63% #777;
@@ -225,7 +226,6 @@ td > .form-actions {
   td .form-type-select > .form-select {
     /* Must use fixed height so padding does not hide descenders. */
     height: 24px;
-    max-width: 100px;
     min-width: 70px;
     line-height: 14px;
     padding: 0 18px 0 4px;
@@ -233,6 +233,9 @@ td > .form-actions {
     letter-spacing: inherit;
     overflow: hidden !important;
     text-overflow: ellipsis;
+  }
+  select {
+    max-width: 100%;
   }
   .details-wrapper > .form-item select {
     width: 100%;
@@ -264,7 +267,6 @@ td > .form-actions {
   .form--inline > .form-item,
   .form--inline .form-actions {
     width: auto;
-  }
   td .form-type-select > .form-select {
     width: auto;
   }

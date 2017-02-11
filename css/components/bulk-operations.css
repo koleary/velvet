@@ -3,15 +3,20 @@
  * Styles for bulk operations.
  */
 
+/* @todo Remove this when https://www.drupal.org/node/2785051 lands. */
 @media all and (min-width: 600px) {
-  #edit-node-bulk-form--2 > div {
+  [data-drupal-selector="edit-header"] div > div {
     display: inline-block;
     margin: 0;
     margin-bottom: 10px;
     padding: 0;
     vertical-align: bottom;
   }
-  #edit-node-bulk-form--2 > div > .button{
+  [data-drupal-selector="edit-header"] div > div .button,
+  [data-drupal-selector="edit-header"] div > div .form-item,
+  .container-inline > .details-wrapper > .form-item   {
+    display: inline-block;
     margin: 0 2px;
+    vertical-align: bottom;
   }
 }

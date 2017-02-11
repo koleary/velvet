@@ -23,7 +23,9 @@ global-styling:
       css/components/entity-meta.css: {}
       css/components/help.css: {}
       css/components/content-header.css: {}
+      css/components/breadcrumbs.css: {}
       css/components/views-ui.css: {}
+      css/components/blocks.css: {}
       css/components/appearance.css: {}
       css/theme/theme.css: {}
   dependencies:

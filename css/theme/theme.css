@@ -7,9 +7,6 @@
   display: inline-block;
   margin-bottom: 10px;
 }
-.breadcrumb {
-  line-height: 1.3em;
-}
 .system-status-report__status-title:first-child {
   padding-left: 40px; /* LTR */
 }
@@ -17,6 +14,7 @@
   padding-left: 6px;
   padding-right: 40px;
 }
+
 /* Remove left margin for narrow viewports. 
  * @todo Move upstream into Seven. */
 @media screen and (min-width: 0em) {
