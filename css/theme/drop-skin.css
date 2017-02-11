@@ -164,15 +164,55 @@ td .dropbutton .secondary-action {
   background-color: #2b8bd8;
 }
 @media screen and (min-width: 0em) {
+  /* When dropbuttons are 100% center the text. */
+  .js .dropbutton-widget .dropbutton-action input {
+    text-align: center;
+  }
   .js .dropbutton-wrapper {
     width: 100%;
     margin-bottom: 10px;
   }
+  /* Collpase dropbuttons in tables to a single circle arrow on narrow viewports. */
+  .js td .dropbutton-wrapper {
+    width: 2em;
+  }
   .js td .dropbutton-wrapper {
     margin-bottom: 0;
   }
-  .js .dropbutton-widget .dropbutton-action input {
-    text-align: center;
+  .js td .dropbutton-widget {
+  position: absolute;
+  right: 0;
+  }
+  .js td .dropbutton-multiple {
+    padding-right: 0;
+    margin-right: 0;
+  }
+  [dir="rtl"].js td .dropbutton-multiple {
+    padding-right: 0;
+    margin-right: 0;
+  }
+  .js td .dropbutton-widget .dropbutton {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+  .js td .dropbutton li,
+  .js td .dropbutton a {
+    margin-left: -9999px;
+  }
+  td .dropbutton-multiple.open .dropbutton li,
+  td .dropbutton-multiple.open .dropbutton a {
+    margin-left: 0;
+  }
+  td .dropbutton-toggle {
+    width: 2em;
+  }
+  .js td .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button {
+    border-left: 0;
+  }
+  span.dropbutton-arrow {
+    right: 8px;
+    top: 13px;
   }
 }
 @media screen and (min-width: 600px) {
@@ -181,6 +221,33 @@ td .dropbutton .secondary-action {
   }
   .js .dropbutton-widget .dropbutton-action input {
     text-align: left;
+  }
+  /* Collpase dropbuttons in tables to a single circle arrow on narrow viewports. */
+  .js td .dropbutton-wrapper {
+    width: 100%;
+  }
+  .js td .dropbutton-wrapper {
+    margin-bottom: 0;
+  }
+  .js td .dropbutton-widget {
+    position: absolute;
+    right: 0;
+  }
+  .js td .dropbutton-widget .dropbutton {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+  .js td .dropbutton li,
+  .js td .dropbutton a {
+    margin-left: 0;
+  }
+  td .dropbutton-multiple.open .dropbutton li,
+  td .dropbutton-multiple.open .dropbutton a {
+    margin-left: 0;
+  }
+  td .dropbutton-toggle {
+    width: 2em;
   }
 }
 
@@ -193,31 +260,3 @@ td .dropbutton .secondary-action {
     float: left;
   }
 }
-.js td .dropbutton-widget {
-  position: absolute;
-  right: 0;
-}
-.js td .dropbutton-multiple {
-  padding-right: 0;
-  margin-right: 0;
-}
-[dir="rtl"].js td .dropbutton-multiple {
-  padding-right: 0;
-  margin-right: 0;
-}
-.js td .dropbutton-widget .dropbutton {
-  list-style-image: none;
-  list-style-type: none;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-}
-.js td .dropbutton li,
-.js td .dropbutton a {
-  margin-left: -9999px;
-}
-td .dropbutton-multiple.open .dropbutton li,
-td .dropbutton-multiple.open .dropbutton a {
-  margin-left: 0;
-}
-
