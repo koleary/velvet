@@ -157,7 +157,6 @@ td.views-field-node-bulk-form {
   td:last-child,
   td.block:last-child {
     overflow: visible;
-    width: 50px;
   }
   .tableresponsive-toggle-columns {
     text-align: right; /* LTR */
@@ -173,13 +172,13 @@ td.views-field-node-bulk-form {
   }
   tr td,
   tr th {
-    width: 1000px;
+    width: 500px;
   }
   tr td:first-child,
   tr th:first-child,
   tr td:last-child,
   tr th:last-child  {
-    width: auto;
+    width: 250px;
   }
   tr td,
   tr th {

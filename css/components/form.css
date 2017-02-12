@@ -267,6 +267,7 @@ td > .form-actions {
   .form--inline > .form-item,
   .form--inline .form-actions {
     width: auto;
+  }
   td .form-type-select > .form-select {
     width: auto;
   }
