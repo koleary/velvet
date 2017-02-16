@@ -5,19 +5,19 @@
 
 
 /* Reset styling for all elements. */
-.js .dropbutton .dropbutton-action > input,
 .js .dropbutton .dropbutton-action > a,
+.js .dropbutton .dropbutton-action > input,
 .js .dropbutton .dropbutton-action > button {
-  text-decoration: none;
-  color: #fff;
   padding: 0;
   margin: 0;
   font-weight: 400;
-  line-height: normal;
   text-align: left; /* LTR */
+  color: #fff;
+  line-height: normal;
+  text-decoration: none;
 }
-[dir="rtl"].js .dropbutton .dropbutton-action > input,
 [dir="rtl"].js .dropbutton .dropbutton-action > a,
+[dir="rtl"].js .dropbutton .dropbutton-action > input,
 [dir="rtl"].js .dropbutton .dropbutton-action > button {
   text-align: right;
   margin-left: 0; 
@@ -26,6 +26,7 @@
 /* Position like other buttons. */
 .dropbutton-wrapper {
   margin: 0 2px;
+  /*transition: none;*/
 }
 .js .dropbutton-widget {
   border: 0;
@@ -61,17 +62,18 @@
   border-radius: 1em;
 }
 .dropbutton-single .dropbutton-action a {
+  width: auto!important;
   padding: 4px 1em;
   border: 0;
   text-decoration: none;
   transition: background 0.5s;
-  width: auto!important;
 }
 .dropbutton-single .dropbutton-action a:hover,
 .dropbutton-single .dropbutton-action a:focus {
   text-decoration: none;
   outline: none;
 }
+/*
 .dropbutton-single .dropbutton-action a:active {
   -webkit-transition: none;
   transition: none;
@@ -94,7 +96,7 @@
 .dropbutton-widget {
   border: 0;
   color: #eee;
-  transition: none;
+  /*transition: none;*/
 }
 .dropbutton-widget:hover {
   box-shadow: 0 2px 2px 1px rgba(0,0,0,0.5);
@@ -109,8 +111,8 @@
 }
 [dir="rtl"] .dropbutton-toggle button {
   border-radius: 0;
-  /*border-bottom-left-radius: 1em;
-  border-top-left-radius: 1em;*/
+  border-bottom-left-radius: 1em;
+  border-top-left-radius: 1em;
   border-width: 0;
   border-right-width: 1px;
 }
@@ -123,7 +125,7 @@
   color: #eee;
   font-size: 90%;
   line-height: 1.8;
-  transition: all 0.5s ease;
+  transition: none;
 }
 .dropbutton:hover a {
   color: #fff;
@@ -172,22 +174,29 @@ td .dropbutton .secondary-action {
     width: 100%;
     margin-bottom: 10px;
   }
-  /* Collpase dropbuttons in tables to a single circle arrow on narrow viewports. */
+  /* Collpase dropbuttons in tables to just a circle arrow. *
   .js td .dropbutton-wrapper {
     width: 2em;
-  }
+  }*/
   .js td .dropbutton-wrapper {
     margin-bottom: 0;
   }
+  /* Push the widget to the right so text expands left. */
   .js td .dropbutton-widget {
-  position: absolute;
-  right: 0;
+    position: absolute;
+    right: 0;
   }
+  [dir="rtl"] .js td .dropbutton-widget {
+    left: 0;
+  }
+  /* Push the wrapper to the right edge of the td. */
   .js td .dropbutton-multiple {
+    float: right;
     padding-right: 0;
     margin-right: 0;
   }
   [dir="rtl"].js td .dropbutton-multiple {
+    float: left;
     padding-right: 0;
     margin-right: 0;
   }
@@ -196,6 +205,7 @@ td .dropbutton .secondary-action {
     overflow: hidden;
     padding: 0;
   }
+  /* Push the text out of the way when button collapses to a circle. */
   .js td .dropbutton li,
   .js td .dropbutton a {
     margin-left: -9999px;
@@ -203,6 +213,10 @@ td .dropbutton .secondary-action {
   td .dropbutton-multiple.open .dropbutton li,
   td .dropbutton-multiple.open .dropbutton a {
     margin-left: 0;
+  }
+  /* Align operations with the circle button. */
+  th:last-child {
+    text-align: right;
   }
   td .dropbutton-toggle {
     width: 2em;
@@ -215,14 +229,8 @@ td .dropbutton .secondary-action {
     top: 13px;
   }
 }
-@media screen and (min-width: 600px) {
-  .js .dropbutton-wrapper {
-    width: auto;
-  }
-  .js .dropbutton-widget .dropbutton-action input {
-    text-align: left;
-  }
-  /* Collpase dropbuttons in tables to a single circle arrow on narrow viewports. */
+/* Ensure buttons will not collapse on most tablets. */
+@media screen and (min-width: 401px) {
   .js td .dropbutton-wrapper {
     width: 100%;
   }
@@ -250,9 +258,13 @@ td .dropbutton .secondary-action {
     width: 2em;
   }
 }
-
-/* Splitbuttons */
 @media screen and (min-width:600px) {
+  .js .dropbutton-wrapper {
+    width: auto;
+  }
+  .js .dropbutton-widget .dropbutton-action input {
+    text-align: left;
+  }
   td .form-actions .dropbutton-wrapper {
     float: right; /* LTR */
   }

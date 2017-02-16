@@ -67,6 +67,11 @@ details.package-listing[open] > summary:hover  {
 .package-listing details.form-wrapper:last-of-type {
   margin-bottom: 0;
 }
+/* Prevent overflow right. */
+.package-listing details, 
+.package-listing details.form-wrapper {
+  width: auto;
+}
 .system-modules details[open] {
   padding-bottom: 0;
 }

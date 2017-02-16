@@ -3,16 +3,10 @@
  * Breadcrumb region and local actions.
  */
 
-.region.region-breadcrumb {
-  margin: 0 0 20px;
-  padding: 10px 0 0;
-  min-height: 30px;
-}
+/* In velvet theme the breadcrumb is located in the header region by default. */
+
 .block-system-breadcrumb-block {
   float: right;
-}
-div#block-velvet-local-actions {
-  float: left;
 }
 .block-system-breadcrumb-block > .breadcrumb,
 div#block-velvet-local-actions > .action-links {

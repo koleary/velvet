@@ -193,6 +193,9 @@ div.views-ui-dialog .views-offset-top {
 .views-filterable-options {
   border-top: 0;
 }
+.views-edit-view {
+  margin-bottom: 0;
+}
 
 /* Form actions. */
 .views-admin > .form-edit .form-actions {
@@ -202,13 +205,13 @@ div.views-ui-dialog .views-offset-top {
   border: 0;
 }
 .views-admin > .form-edit .form-actions input {
-  margin: 0 0 10px;
+  margin: 0 2px 10px;
 }
 
 /* View preview. */
 div.views-preview-wrapper {
-  margin: -15px -20px;
-  border-top: 1px solid #999;
+  margin: 0;
+  border-top: 0;
 }
 .view-preview-form__title {
   background-color: #333;
@@ -223,7 +226,7 @@ div.views-preview-wrapper {
   right: auto;
 }
 .views-filterable-options-controls .form-item {
-  margin: 0 0 10px;
+  margin: 0 2px 10px;
 }
 .preview-section table {
   margin: 0;

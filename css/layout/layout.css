@@ -3,6 +3,10 @@
  * Layout styles.
  */
 
+/* This sets the general margin.
+ * Overrides include deails/summary, fieldsets, vertical tabs and messages
+ * which get a -20px left and right to push them to the viewport edge.
+ */
 .layout-container {
   margin: 0 20px;
 }
@@ -14,3 +18,11 @@
   margin-left: 0;
   margin-right: 0;
 }
+/* Experimental. 
+@media all and (min-width: 1024px) {
+  main,
+  .region.region-breadcrumb,
+  .region.region-help {
+    max-width: 1024px;
+  }
+}*/

@@ -3,21 +3,20 @@
  * Visual styling for dropbuttons.
  */
 
-
 /* Reset styling for all elements. */
-.js .dropbutton .dropbutton-action > input,
 .js .dropbutton .dropbutton-action > a,
+.js .dropbutton .dropbutton-action > input,
 .js .dropbutton .dropbutton-action > button {
-  text-decoration: none;
-  color: #fff;
   padding: 0;
   margin: 0;
   font-weight: 400;
-  line-height: normal;
   text-align: left; /* LTR */
+  color: #fff;
+  line-height: normal;
+  text-decoration: none;
 }
-[dir="rtl"].js .dropbutton .dropbutton-action > input,
 [dir="rtl"].js .dropbutton .dropbutton-action > a,
+[dir="rtl"].js .dropbutton .dropbutton-action > input,
 [dir="rtl"].js .dropbutton .dropbutton-action > button {
   text-align: right;
   margin-left: 0; 
@@ -26,9 +25,11 @@
 /* Position like other buttons. */
 .dropbutton-wrapper {
   margin: 0 2px;
+  transition: none;
 }
 .js .dropbutton-widget {
   border: 0;
+  transition: none;
 }
 .dropbutton-multiple .dropbutton {
   border: 0;
@@ -44,10 +45,10 @@
 .js .dropbutton-widget .dropbutton-action a,
 .js .dropbutton-widget .dropbutton-action input,
 .js .dropbutton-widget .dropbutton-action button {
-  border-radius: 0;
-  padding: 6px 14px;
   display: block;
   width: 100%;
+  padding: 6px 14px;
+  border-radius: 0;
 }
 .dropbutton .secondary-action {
   border: 0;
@@ -61,11 +62,11 @@
   border-radius: 1em;
 }
 .dropbutton-single .dropbutton-action a {
+  width: auto!important;
   padding: 4px 1em;
   border: 0;
   text-decoration: none;
   transition: background 0.5s;
-  width: auto!important;
 }
 .dropbutton-single .dropbutton-action a:hover,
 .dropbutton-single .dropbutton-action a:focus {
@@ -73,7 +74,6 @@
   outline: none;
 }
 .dropbutton-single .dropbutton-action a:active {
-  -webkit-transition: none;
   transition: none;
 }
 
@@ -109,8 +109,8 @@
 }
 [dir="rtl"] .dropbutton-toggle button {
   border-radius: 0;
-  /*border-bottom-left-radius: 1em;
-  border-top-left-radius: 1em;*/
+  border-bottom-left-radius: 1em;
+  border-top-left-radius: 1em;
   border-width: 0;
   border-right-width: 1px;
 }
@@ -123,7 +123,7 @@
   color: #eee;
   font-size: 90%;
   line-height: 1.8;
-  transition: all 0.5s ease;
+  transition: background 0.5s ease;
 }
 .dropbutton:hover a {
   color: #fff;
@@ -184,7 +184,6 @@ td .dropbutton .secondary-action {
   }
 }
 
-/* Splitbuttons */
 @media screen and (min-width:600px) {
   td .form-actions .dropbutton-wrapper {
     float: right; /* LTR */
@@ -212,6 +211,7 @@ td .dropbutton .secondary-action {
   overflow: hidden;
   padding: 0;
 }
+/* Push the text out of the way when bottn collapses to a circle. */
 .js td .dropbutton li,
 .js td .dropbutton a {
   margin-left: -9999px;
