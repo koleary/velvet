@@ -1,0 +1,60 @@
+/**
+ * @file
+ * Seven styles for the System Status general info.
+ */
+
+.system-status-general-info {
+  border: 1px solid #777;
+  border-radius: 0;
+}
+.system-status-general-info__header {
+  background-color: #222;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.system-status-general-info__item {
+  background: #333;
+  border-top: 1px solid #777;
+}
+.system-status-general-info__item-icon--d8:before {
+  background-image: url(../../images/icons/cccccc/d8-logo.svg);
+}
+.system-status-general-info__item-icon--clock:before {
+  background-image: url(../../images/icons/cccccc/clock.svg);
+}
+.system-status-general-info__item-icon--server:before {
+  background-image: url(../../images/icons/cccccc/server.svg);
+}
+.system-status-general-info__item-icon--php:before {
+  background-image: url(../../images/icons/cccccc/php-logo.svg);
+  background-size: 45px;
+}
+.system-status-general-info__item-icon--database:before {
+  background-image: url(../../images/icons/cccccc/database.svg);
+  background-size: 30px;
+}
+
+@media screen and (min-width: 48em) {
+  .system-status-general-info__item:nth-child(2),
+  .system-status-general-info__item:nth-child(4),
+  .system-status-general-info__item:nth-child(5) {
+    border-left: 1px solid #777; /* LTR */
+  }
+  [dir="rtl"] .system-status-general-info__item:nth-child(1),
+  [dir="rtl"] .system-status-general-info__item:nth-child(3) {
+    border-left: 1px solid #777;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .system-status-general-info__item-icon {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .system-status-general-info__header {
+    display: none;
+  }
+}

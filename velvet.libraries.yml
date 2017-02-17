@@ -27,6 +27,7 @@ global-styling:
       css/components/views-ui.css: {}
       css/components/blocks.css: {}
       css/components/appearance.css: {}
+      css/components/system-status-report.css: {}
       css/theme/theme.css: {}
   dependencies:
     - system/admin

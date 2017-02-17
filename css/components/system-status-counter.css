@@ -1,0 +1,25 @@
+/**
+ * @file
+ * Styles for the system status counter component.
+ */
+
+.system-status-counter {
+  border: 1px solid #777;
+  border-radius: 0;
+  background: #333;
+}
+.system-status-counter__status-icon {
+  border-right-color: #777;
+  border-left-color: #777;
+  background-color: #333;
+  box-shadow: none;
+}
+.system-status-counter__status-icon--error:before {
+  background-image: url(../../../stable/images/core/icons/e32700/error.svg);
+}
+.system-status-counter__status-icon--warning:before {
+  background-image: url(../../../stable/images/core/icons/e29700/warning.svg);
+}
+.system-status-counter__status-icon--checked:before {
+  background-image: url(../../../stable/images/core/icons/73b355/check.svg);
+}
