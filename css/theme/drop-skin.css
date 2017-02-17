@@ -3,7 +3,6 @@
  * Visual styling for dropbuttons.
  */
 
-
 /* Reset styling for all elements. */
 .js .dropbutton .dropbutton-action > a,
 .js .dropbutton .dropbutton-action > input,
@@ -73,11 +72,6 @@
   text-decoration: none;
   outline: none;
 }
-/*
-.dropbutton-single .dropbutton-action a:active {
-  -webkit-transition: none;
-  transition: none;
-}
 
 /* The dropdown trigger. */
 .js .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button {
@@ -96,7 +90,6 @@
 .dropbutton-widget {
   border: 0;
   color: #eee;
-  /*transition: none;*/
 }
 .dropbutton-widget:hover {
   box-shadow: 0 2px 2px 1px rgba(0,0,0,0.5);
@@ -174,10 +167,6 @@ td .dropbutton .secondary-action {
     width: 100%;
     margin-bottom: 10px;
   }
-  /* Collpase dropbuttons in tables to just a circle arrow. *
-  .js td .dropbutton-wrapper {
-    width: 2em;
-  }*/
   .js td .dropbutton-wrapper {
     margin-bottom: 0;
   }
@@ -249,6 +238,12 @@ td .dropbutton .secondary-action {
   .js td .dropbutton li,
   .js td .dropbutton a {
     margin-left: 0;
+  }
+  .js td .dropbutton-multiple .dropbutton-widget {
+    max-width: 100%;
+  }
+  .js td .dropbutton-multiple.open .dropbutton-widget {
+    max-width: none;
   }
   td .dropbutton-multiple.open .dropbutton li,
   td .dropbutton-multiple.open .dropbutton a {
