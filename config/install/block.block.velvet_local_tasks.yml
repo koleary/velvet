@@ -4,11 +4,11 @@ dependencies:
   theme:
     - velvet
 _core:
-  default_config_hash: UVoSGepwah6FU9u8fmAEgrH_9tRVWRF9hN1kXq9xJLg
+  default_config_hash: kNQCGnobV1y70VHT1keTqdVnaISeCq9RLx2fG8j_HB8
 id: velvet_local_tasks
 theme: velvet
 region: header
-weight: 1
+weight: -1
 provider: null
 plugin: local_tasks_block
 settings:

@@ -4,11 +4,11 @@ dependencies:
   theme:
     - velvet
 _core:
-  default_config_hash: DeZegXa5GsEZiVw9pVZGMhJ_qCskhKYfuxEfelMLe70
+  default_config_hash: yauCu7i7zP2Oa8p3pmL3uHdQWTKwrvFWpPFw28_3AQw
 id: velvet_page_title
 theme: velvet
 region: header
-weight: 0
+weight: -3
 provider: null
 plugin: page_title_block
 settings:

@@ -4,11 +4,11 @@ dependencies:
   theme:
     - velvet
 _core:
-  default_config_hash: rdw2TdEY1Z3t_lKzLdXU-NjeSygtGYygs8hGo0ewrOg
+  default_config_hash: xewEnPO2Eai2f-qahWOHw77EiJ25ELG74zqz5ygGmiw
 id: velvet_local_actions
 theme: velvet
 region: content
-weight: -4
+weight: -3
 provider: null
 plugin: local_actions_block
 settings:
