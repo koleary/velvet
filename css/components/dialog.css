@@ -65,3 +65,10 @@
   margin: 0 5px 10px;
 }
 
+/* When this theme is loaded in an iframe. */
+form .off-canvas-iframe:hover,
+form .off-canvas-iframe:focus,
+form .off-canvas-iframe:active {
+  outline: none;
+}
+

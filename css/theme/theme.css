@@ -3,6 +3,10 @@
  * General styles.
  */
 
+/* Chrome puts focus effect on entire main element. */
+main:focus {
+  outline: none;
+}
 .page-title {
   display: inline-block;
   margin-bottom: 10px;
@@ -21,13 +25,21 @@
   .permissions .permission {
     padding-left: 0;
   }
+  .block-page-title-block {
+    float: none;
+    width: 100%;
+  }
+  .page-title {
+    display: inline-block;
+    margin-bottom: 0;
+  }
 }
 @media screen and (min-width: 600px) {
   .permissions .permission {
     padding-left: 20px;
   }
+  .block-page-title-block {
+    float:left;
+    width: 50%;
+  }
 }
-header {
-  display: none;
-}
-

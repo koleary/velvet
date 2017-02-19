@@ -65,16 +65,15 @@ tbody tr:hover .region-empty {
 }
 
 /* Override semantic background hover color. */
-tbody tr.color-warning:hover,
-tbody tr.color-warning:focus,
-tbody tr.color-error:hover,
-tbody tr.color-error:focus {
-  background: #333;
-}
 tr:hover,
 tr:hover td,
 tbody tr:hover,
-tbody tr:focus {
+tbody tr:focus,
+tbody tr.color-error:hover,
+tbody tr.color-error:focus,
+tbody tr.color-warning:hover,
+tbody tr.color-warning:focus {
+  background: #333;
   background-color: #333;
 }
 tr.odd,
@@ -88,9 +87,7 @@ tr.selected td {
 }
 td.checkbox,
 th.checkbox {
-  text-align: center;
-  width: 10px;
-  max-width: 10px;
+  text-align: left;
 }
 thead th {
   text-transform: none;
@@ -150,13 +147,6 @@ td.views-field-node-bulk-form {
     max-width: 100px;
     font-size: 95%;
     letter-spacing: -0.2px;
-    overflow: hidden;
-  }
-  /* This prevents the dropbutton dropdowns from being hidden. 
-  /* @todo Figure out a way that doesn't assume actions are always the last cell. */
-  td:last-child,
-  td.block:last-child {
-    overflow: visible;
   }
   .tableresponsive-toggle-columns {
     text-align: right; /* LTR */
@@ -191,10 +181,6 @@ td.views-field-node-bulk-form {
   td,
   td.block {
     max-width: 100%;
-    overflow: hidden;
-  }
-  td.block:last-child {
-    overflow: visible;
   }
 }
 

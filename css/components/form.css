@@ -3,6 +3,9 @@
  * Visual styling for forms.
  */
 
+form {
+  outline: none;
+}
 label,
 .label,
 .form-composite > legend  {

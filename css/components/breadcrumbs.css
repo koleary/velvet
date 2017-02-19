@@ -3,37 +3,31 @@
  * Breadcrumb region and local actions.
  */
 
+.breadcrumb {
+  line-height: 120%;
+}
 /* In velvet theme the breadcrumb is located in the header region by default. */
-
-.block-system-breadcrumb-block {
-  float: right;
-}
-.block-system-breadcrumb-block > .breadcrumb,
-div#block-velvet-local-actions > .action-links {
-  margin: 0;
-  padding: 0;
-}
 @media screen and (min-width: 0em) {
-  .block-system-breadcrumb-block,
-  div#block-velvet-local-actions {
+  .region-header .block-system-breadcrumb-block {
     float: left;
     width: 100%;
+    margin-top: 0;
     margin-bottom: 10px;
   }
   .breadcrumb {
     text-align: left;
+    margin-top: 0;
+    padding: 5px 0 0;
   }
 }
 @media screen and (min-width: 600px) {
-  div#block-velvet-local-actions {
-    width: auto;
-    float: left;
-  }
-  .block-system-breadcrumb-block {
+  .region-header .block-system-breadcrumb-block {
     width: auto;
     float: right;
   }
   .breadcrumb {
+    margin-top: 0;
+    padding: 10px 0;
     text-align: right;
   }
 }

@@ -18,11 +18,3 @@
   margin-left: 0;
   margin-right: 0;
 }
-/* Experimental. 
-@media all and (min-width: 1024px) {
-  main,
-  .region.region-breadcrumb,
-  .region.region-help {
-    max-width: 1024px;
-  }
-}*/

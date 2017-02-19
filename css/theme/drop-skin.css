@@ -163,10 +163,15 @@ td .dropbutton .secondary-action {
   .js .dropbutton-widget .dropbutton-action input {
     text-align: center;
   }
+  .js td * {
+    max-width: 100%;
+  }
   .js .dropbutton-wrapper {
     width: 100%;
+    max-width: 100%;
     margin-bottom: 10px;
   }
+  /* Special rules for tables. */
   .js td .dropbutton-wrapper {
     margin-bottom: 0;
   }
@@ -195,8 +200,8 @@ td .dropbutton .secondary-action {
     padding: 0;
   }
   /* Push the text out of the way when button collapses to a circle. */
-  .js td .dropbutton li,
-  .js td .dropbutton a {
+  .js td .dropbutton-multiple li,
+  .js td .dropbutton-multiple a {
     margin-left: -9999px;
   }
   td .dropbutton-multiple.open .dropbutton li,
@@ -212,6 +217,31 @@ td .dropbutton .secondary-action {
   }
   .js td .dropbutton-wrapper .dropbutton-widget .dropbutton-toggle button {
     border-left: 0;
+  }
+  /* Single action is hidden then replaced with icon. */
+  td ul.dropbutton li.edit {
+    width: 2em;
+  }
+  /* Edit text is transparent above icon. */
+  td .dropbutton-single li.edit.dropbutton-action > a {
+    display: block;
+    position: relative;
+    left: -11px;
+    color: transparent;
+    z-index: 1;
+  }
+   /* Pencil icon inserted under 'edit'. */
+  td .dropbutton-single .edit:before {
+    content: '.';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    color: transparent;
+    background: transparent url(/core/misc/icons/ffffff/pencil.svg) no-repeat center;
+    background-size: 14px;
   }
   span.dropbutton-arrow {
     right: 8px;
