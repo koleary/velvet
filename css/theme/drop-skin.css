@@ -296,4 +296,7 @@ td .dropbutton .secondary-action {
   [dir="rtl"] td .form-actions .dropbutton-wrapper {
     float: left;
   }
+  td ul.dropbutton li.edit {
+    width: auto;
+  }
 }

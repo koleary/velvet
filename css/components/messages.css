@@ -71,3 +71,10 @@
 [dir="rtl"] .messages--error {
   border-color: transparent #e62600 transparent transparent;
 }
+
+@media screen and (min-width: 600px) {
+  .messages {
+    margin: 10px 0;
+  }
+}
+
