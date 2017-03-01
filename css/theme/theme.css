@@ -41,5 +41,6 @@ main:focus {
   .block-page-title-block {
     float:left;
     width: 50%;
+    margin-bottom: 10px;
   }
 }
